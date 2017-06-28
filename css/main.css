@@ -1,0 +1,13 @@
+
+body {
+    background-color: #272361;
+}
+
+.page-main {
+    width: 100%;
+    text-align: center;
+}
+
+.logo {
+    margin: 2em auto;
+}
