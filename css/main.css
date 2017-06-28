@@ -1,13 +1,54 @@
+html {
+  font-family: Arial, Helvetica, Sans, Sans-Serif, Sans Serif;
+  font-size: 100%;
+  line-height: 1.25;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  color: #ffffff; }
 
 body {
-    background-color: #272361;
-}
+  margin: 0;
+  background: linear-gradient(to bottom, #272361 0%, #272361 50%, #41295a 100%); }
 
-.page-main {
-    width: 100%;
-    text-align: center;
-}
+.melody {
+  max-width: 890px;
+  min-height: calc(100vh - 64px);
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 0 32px; }
+  @media only screen and (min-width: 712px) {
+    .melody {
+      justify-content: center;
+      padding-top: 32px; } }
+  .melody p {
+    text-align: center; }
+  .melody__heading {
+    font-size: 36px;
+    margin: 32px 0;
+    line-height: 1.25; }
+    @media only screen and (min-width: 712px) {
+      .melody__heading {
+        font-size: 44px; } }
+  .melody__logo {
+    width: 100%; }
+    @media only screen and (min-width: 600px) {
+      .melody__logo {
+        width: auto; } }
+    .melody__logo--trivago {
+      margin-left: 8px; }
 
-.logo {
-    margin: 2em auto;
-}
+.footer {
+  position: absolute;
+  bottom: 0;
+  background-color: #6eceb2;
+  height: 64px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  color: #272361; }
+
+/*# sourceMappingURL=main.css.map */
