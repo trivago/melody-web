@@ -1,95 +1,107 @@
 <main class="page_wrapper melody">
-    <header class="">
-        <nav>
-            <a href="#" ref="documentationLink">Documentation</a>
-        </nav>
-    </header>
-    <section class="hero">
-        <div class="hero__melody-logo">
-            {# svg icon #}
-        </div>
-        <div class="hero__welcome">
-            <h1 class="hero__heading">Melody is a fast and memory efficient library for creating highly dynamic user interfaces</h1>
-            <button type="button" class="btn btn--primary">Download</button>
-            <button type="button" class="btn btn--secondary">Github</button>
-            <p class="hero__quick-start">
-                Quick start <span class="highlight">instructions</span>
-            </p>
+    <nav class="nav">
+        <a class="nav__item" href="#" ref="documentationLink">Documentation</a>
+    </nav>
+    <section class="hero section--primary">
+        <div class="hero__content flex-container">
+            <div class="hero__melody-logo">
+                {# svg icon #}
+            </div>
+            <div class="hero__welcome">
+                <h1 class="hero__heading">Melody is a fast and memory efficient library for creating highly dynamic user interfaces</h1>
+                <div class="hero__download">
+                    <button type="button" class="btn btn--primary">
+                        Download
+                    </button>
+                    <button type="button" class="btn btn--secondary">Github</button>
+                </div>
+                <p>Quick start <span class="highlight">instructions</span></p>
+            </div>
         </div>
     </section>
-    <section>
-        <h2>In a nutshell</h2>
-        <article>
-            <span>
-                {# icon image thing #}
-            </span>
-            <p>Melody is small, only 15kb, making it fast for the browser to download and parse.</p>
-        </article>
-        <article>
-            <span>
-                {# icon image thing #}
-            </span>
-            <p>Melody is small, only 15kb, making it fast for the browser to download and parse.</p>
-        </article>
-        <article>
-            <span>
-                {# icon image thing #}
-            </span>
-            <p>Melody is small, only 15kb, making it fast for the browser to download and parse.</p>
-        </article>
-        <article>
-            <span>
-                {# icon image thing #}
-            </span>
-            <p>Melody is small, only 15kb, making it fast for the browser to download and parse.</p>
-        </article>
-        <div>
-            <span>
-                {# icon image thing #}
-            </span>
-            <p>Melody is small, only 15kb, making it fast for the browser to download and parse.</p>
+    <section class="nutshell section--secondary">
+        <div class="flex-container">
+            <h2 class="heading heading--primary">In a nutshell</h2>
+            <div class="nutshell__features">
+                <article class="nutshell__item">
+                    <div class="nutshell__image">
+                        {# icon image thing #}
+                    </div>
+                    <p class="nutshell__description">Melody is small, only 15kb, making it fast for the browser to download and parse.</p>
+                </article>
+                <article class="nutshell__item">
+                    <div class="nutshell__image">
+                        {# icon image thing #}
+                    </div>
+                    <p class="nutshell__description nutshell__description--middle">Melody's compiler supports you by giving you understandable and accurate error messages whenever it cannot make sense of a template.</p>
+                </article>
+                <article class="nutshell__item">
+                    <div class="nutshell__image">
+                        {# icon image thing #}
+                    </div>
+                        <p class="nutshell__description">Live in production to millions of trivago users worldwide.</p>
+                </article>
+                <article class="nutshell__item">
+                    <div class="nutshell__image">
+                        {# icon image thing #}
+                    </div>
+                        <p class="nutshell__description">Melody was designed in a modular fashion from the ground up. You can change what goes in, like a different template language, and you are in control what comes out: If you need a different view layer, that's no problem.</p>
+                </article>
+                <article class="nutshell__item">
+                    <div class="nutshell__image">
+                        {# icon image thing #}
+                    </div>
+                        <p class="nutshell__description nutshell__description--middle">Melody is among the fastest UI libraries out there. Because of its adaptive rendering and memory efficiency, garbage collection is kept at a minimum, giving the browser lots of time to draw smooth and responsive user interfaces.</p>
+                </article>
+                <article class="nutshell__item">
+                    <div class="nutshell__image">
+                        {# icon image thing #}
+                    </div>
+                        <p class="nutshell__description">Melody provides an API (or set of functions) to enhance your views, it leverages functional programming to help you to create better structure for your applications.</p>
+                </article>
+            </div>
         </div>
-        <article>
-            <span>
-                {# icon image thing #}
-            </span>
-            <p>Melody is small, only 15kb, making it fast for the browser to download and parse.</p>
-        </article>
-        <article>
-            <span>
-                {# icon image thing #}
-            </span>
-            <p>Melody is small, only 15kb, making it fast for the browser to download and parse.</p>
-        </article>
     </section>
-    <section>
-        <h2>Melody is different</h2>
-        <ul>
-            <li>Smaller</li>
-            <li>Smaller</li>
-            <li>Smaller</li>
-            <li>Smaller</li>
-            <li>Smaller</li>
-            <li>Smaller</li>
-        </ul>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget cursus ante. Suspendisse fringilla nec massa eget hendrerit. Duis placerat urna sem, sed ornare purus tincidunt sit amet. Donec luctus nec nisl id placerat.</p>
-    </section>
-    <section>
-        <h2>Melody in action</h2>
-        <div></div>
-    </section>
-    <section>
-        <h2>Let's get started</h2>
-        <button type="button">Download</button>
-        <button type="button">Github</button>
-        <p>
-            Check out the <span>5 minute tutorial</span> on how to build your first Melody application
-        </p>
-        <div>
-            {# code block #}
+    <section class="differences section--primary">
+        <div class="flex-container">
+            <h2 class="heading heading--secondary">Differences from other frameworks</h2>
+            <div class="differences__content">
+                <ul class="differences__list">
+                    <li>Smaller</li>
+                    <li class="active">Flexible</li>
+                    <li>Efficient</li>
+                    <li>Functional</li>
+                    <li>Specific</li>
+                </ul>
+                <p class="differences__explanation">Melody uses templates to keep a clear separation of concerns, these templates are compiled to a set of DOM instructions defining the structure of a UI. Other template languages besides Twig can be implemented.</p>
+            </div>
         </div>
-        <p>
-            Dive deeper and read the <span>documentation</span>
-        </p>
+    </section>
+    <section class="in-action section--secondary">
+        <div class="flex-container">
+            <h2 class="heading heading--primary">Melody in action</h2>
+            <div class="in-action__code-block"></div>
+        </div>
+    </section>
+    <section class="hero section--primary">
+        <div class="hero__content--small flex-container">
+            <div class="hero__welcome">
+                <h1 class="hero__heading">Melody is a fast and memory efficient library for creating highly dynamic user interfaces</h1>
+                <div class="hero__download">
+                    <button type="button" class="btn btn--primary">
+                        Download
+                    </button>
+                    <button type="button" class="btn btn--secondary">Github</button>
+                </div>
+                <p>Check out the <span class="highlight">5 minute tutorial</span> on how to build your first Melody application</p>
+                <div>
+                    {# code block #}
+                </div>
+                <p>Dive deeper and read the <span class="highlight">documentation</span></p>
+            </div>
+            <div class="hero__melody-logo">
+                {# svg icon #}
+            </div>
+        </div>
     </section>
 </main>

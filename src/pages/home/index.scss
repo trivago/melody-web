@@ -1,20 +1,58 @@
+html {
+    font-family: 'Quicksand', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.25;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    color: $purple;
+}
 
 
+.nav {
+    position: fixed;
+    padding: 16px 32px;
+    top: 0;
+    right: 0;
 
+    &__item {
+        color: $white;
+        text-decoration: none;
+    }
+}
+
+.section {
+    &--primary {
+        background-color: $purple;
+        border-top: 5px solid $dark-blue;
+        border-bottom: 5px solid $dark-blue;
+        width: 100%;
+        color: $white;
+        padding: 48px 0;
+
+        &:first-of-type {
+            padding: 0;
+            border-bottom: 0;
+        }
+    }
+    &--secondary {
+        padding: 48px 0;
+    }
+}
 
 .hero {
-    display: flex;
-    max-width: 900px;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
+    &__content {
+        height: 80vh;
 
+        &--small {
+            height: 50vh;
+        }
+    }
     &__melody-logo {
         flex: 1 0 auto;
         width: 300px;
         height: 300px;
-        background-color: red;
+        background-color: $dark-blue;
         border-radius: 50%;
         flex-basis: 50%;
     }
@@ -23,14 +61,87 @@
         flex-basis: 50%;
     }
     &__heading {
-
+        font-size: 24px;
+        font-weight: bold;
+        color: $white;
+        letter-spacing: 2px;
     }
-    &__quick-start {
-
+    &__download {
+        display: flex;
     }
 }
 
 
+.nutshell {
+    &__features {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__image {
+        width: 180px;
+        height: 180px;
+        background-color: $purple;
+        margin-bottom: 24px;
+    }
+    &__item {
+        width: 33%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 32px 0;
+    }
+    &__description {
+        font-size: 16px;
+        font-weight: 500;
+        color: $juri;
+
+        &--middle {
+            margin: 0 32px;
+        }
+    }
+}
+
+
+.differences {
+    &__content {
+        display: flex;
+    }
+    &__list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        color: $green;
+        font-size: 20px;
+        flex-basis: 30%;
+
+        li {
+            padding: 8px 0;
+
+            &:first-child {
+                padding: 0 0 8px;
+            }
+        }
+
+        .active {
+            color: $white;
+        }
+
+    }
+    &__explanation {
+        margin: 0 0 0 20%; //fix this ugly hack immediately. so much shame.
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 500;
+    }
+}
+
+.in-action {
+    &__code-block {
+        height: 500px;
+        width: 100%;
+        background: #eee;
+    }
+}
 
 
 
@@ -39,13 +150,46 @@
  // OOCSS
 
 .btn {
-    &--primary {
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
 
+    &--primary {
+        background-color: $green;
+        border: 0;
+        padding: 8px 12px;
     }
     &--secondary {
-
+        padding: 14px 12px;
+        background-color: transparent;
+        color: $green;
+        border: 1px solid $green;
+        margin-left: 24px;
     }
 }
 .highlight {
+    color: $green;
+}
 
+.heading {
+    font-size: 32px;
+    width: 100%;
+
+    &--primary {
+        color: $purple;
+    }
+    &--secondary {
+        color: $white;
+    }
+}
+
+.flex-container {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+    flex-wrap: wrap;
 }
