@@ -1,0 +1,51 @@
+
+
+
+
+.hero {
+    display: flex;
+    max-width: 900px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+
+    &__melody-logo {
+        flex: 1 0 auto;
+        width: 300px;
+        height: 300px;
+        background-color: red;
+        border-radius: 50%;
+        flex-basis: 50%;
+    }
+    &__welcome {
+        flex: 1 1 auto;
+        flex-basis: 50%;
+    }
+    &__heading {
+
+    }
+    &__quick-start {
+
+    }
+}
+
+
+
+
+
+
+
+ // OOCSS
+
+.btn {
+    &--primary {
+
+    }
+    &--secondary {
+
+    }
+}
+.highlight {
+
+}

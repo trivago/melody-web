@@ -1,9 +1,9 @@
 import { render } from 'melody-component';
-import MelodyRouter from './router';
-import './index.scss';
+import MelodyRouter from './components/router';
+import './base.scss';
 
-import Home from './home';
-import Documentation from './documentation';
+import Home from './pages/home';
+import Documentation from './pages/documentation';
 
 const Router = MelodyRouter({
     ['/']: Home,
