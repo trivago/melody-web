@@ -1,0 +1,8 @@
+<div id="app">
+    {% if ChildComponent and ChildComponentKey %}
+        {% mount ChildComponent as ChildComponentKey with {
+            changeRoute: changeRoute,
+            params: params
+        } %}
+    {% endif %}
+</div>
