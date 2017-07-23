@@ -20,6 +20,10 @@ html {
             padding: 0;
             border-top: 0;
         }
+
+        &:last-of-type {
+            border-bottom: 0;
+        }
     }
     &--secondary {
         padding: 48px 0;
@@ -205,6 +209,27 @@ html {
 }
 
 code {
-    font-family: "Andale Mono", AndaleMono, monospace;
+    font-family: "Andale Mono",AndaleMono,"Lucida Console","Lucida Sans Typewriter",monospace;
     line-height: 1.5;
 }
+
+.noscript {
+    width: 100vh;
+    height: 100vh;
+    background-color: $purple;
+
+    &__notification {
+        position: fixed;
+        top: 0;
+        background-color: $white;
+        border-bottom: 5px solid $green;
+        width: 100%;
+    }
+
+    &__message {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 16px 32px;
+    }
+}
+

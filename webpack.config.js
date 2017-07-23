@@ -6,6 +6,7 @@ var LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 
 module.exports = {
     entry: {
+        'sw': path.join(__dirname, 'src/components/serviceworker/sw.js'),
         'main': path.join(__dirname, 'src/index.js')
     },
     output: {

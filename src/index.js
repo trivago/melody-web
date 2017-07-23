@@ -1,5 +1,6 @@
 import { render } from 'melody-component';
 import MelodyRouter from './components/router';
+import './components/serviceworker';
 import './base.scss';
 
 import Home from './pages/home';

@@ -1,0 +1,9 @@
+{
+  "name": "Melody",
+  "short_name": "Melody",
+  "background_color": "#424383",
+  "display": "standalone",
+  "theme_color": "#424383",
+  "start_url": "/",
+  "orientation": "portrait"
+}
