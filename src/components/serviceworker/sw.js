@@ -1,6 +1,6 @@
 import toolbox from 'sw-toolbox';
 
-const bypassSW = false;
+const bypassSW = true;
 const DEBUG = false;
 
 if(!bypassSW) {
