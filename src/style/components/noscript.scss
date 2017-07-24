@@ -1,0 +1,19 @@
+.noscript {
+    width: 100vw;
+    height: 100vh;
+    background-color: $purple;
+
+    &__notification {
+        position: fixed;
+        top: 0;
+        background-color: $white;
+        border-bottom: 5px solid $green;
+        width: 100%;
+    }
+
+    &__message {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 16px 32px;
+    }
+}

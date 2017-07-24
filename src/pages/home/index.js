@@ -80,7 +80,7 @@ function createMeteoriteShower(canvasContainer) {
     const ctx = canvas.getContext('2d');
     let canvasHeight = canvasContainer.clientHeight;
     let canvasWidth = canvasContainer.clientWidth;
-    let shouldAnimate = canvasWidth >= 800;
+    let shouldAnimate = canvasWidth >= 900;
     let animating;
 
     const numberOfMeteorites = Math.round(canvasWidth / 12);

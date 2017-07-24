@@ -6,6 +6,10 @@
 
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+
+    @include respond-to-min($tablet) {
+
+    }
 }
 
 .side-menu {

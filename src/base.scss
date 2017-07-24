@@ -1,9 +1,13 @@
 // base imports
 @import 'style/utility/variables';
+@import 'style/utility/mixins';
 @import 'style/generic/normalize';
 
 // components
 @import 'components/nav/index';
+@import 'style/components/noscript';
+@import 'style/components/oocss';
+@import 'style/components/shell';
 
 //pages
 @import 'pages/home/index';

@@ -1,0 +1,58 @@
+.btn {
+    font-family: 'Quicksand', Arial, sans-serif;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+
+    &--primary {
+        background-color: $green;
+        color: $purple;
+        border: 0;
+        padding: 8px 12px;
+    }
+    &--secondary {
+        padding: 14px 12px;
+        background-color: transparent;
+        color: $green;
+        border: 1px solid $green;
+        margin-left: 24px;
+    }
+}
+.highlight {
+    color: $green;
+}
+
+.heading {
+    font-size: 32px;
+    width: 100%;
+    margin: 0;
+}
+
+code {
+    font-family: "Andale Mono",AndaleMono,"Lucida Console","Lucida Sans Typewriter",monospace;
+    line-height: 1.5;
+}
+
+.bg {
+    &--purple {
+        background-color: $purple;
+        border-top: 5px solid $dark-blue;
+        border-bottom: 5px solid $dark-blue;
+        padding: 48px 0;
+        color: $white;
+
+        &:first-of-type {
+            padding: 0;
+            border-top: 0;
+        }
+
+        &:last-of-type {
+            border-bottom: 0;
+        }
+    }
+    &--white {
+        padding: 48px 0;
+    }
+}
