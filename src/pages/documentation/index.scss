@@ -1,21 +1,28 @@
 .docs {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
     height: 100vh;
     width: 900px;
     margin: 0 auto;
-    padding-top: 75px;
 
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-
-    @include respond-to-min($tablet) {
-
-    }
+    
 }
 
 .side-menu {
-    grid-column: 1 / 3;
+    padding: 75px 32px;
+    display: none;
+
+    @include respond-to-min($tablet) {
+        display: block;
+        grid-column: 1 / 3;
+    }
 }
 
 .docs-content {
-    grid-column: 3 / 7;
+    padding: 75px 32px;
+    grid-column: 1 / 6;
+
+    @include respond-to-min($tablet) {
+        grid-column: 3 / 7;
+    }
 }

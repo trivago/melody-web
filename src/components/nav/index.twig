@@ -1,8 +1,8 @@
 <nav class="nav{{isHome and not isFixed ? ' nav--inverse' }}{{isFixed ? ' nav--fixed' }}">
-    <a class="nav__logo">
+    <a class="nav__logo" ref="homepageLink">
         {% include '../../style/icons/icn-logo_header.html.twig' %}
     </a>
-    <div class="nav_items">
+    <div class="nav__items">
         <a class="nav__item" href="/documentation" ref="documentationLink">Documentation</a>
     </div>
 </nav>

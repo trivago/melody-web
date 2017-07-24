@@ -1,14 +1,17 @@
 .nav {
     position: absolute;
-    display: flex;
+    display: grid;
     top: 0;
     left: 0;
-    margin: 16px 32px;
+    padding: 16px 0;
     width: 100%;
     letter-spacing: 1px;
     z-index: 4;
     background: $purple;
     border-bottom: 3px solid $green;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+
 
     &--fixed {
         position: fixed;
@@ -20,18 +23,21 @@
     }
 
     &__logo {
-        flex: 1 0 auto;
+        grid-column: 1 / 2;
         cursor: pointer;
+        padding-left: 32px;
     }
 
     &__items {
-        flex: 1 1 auto;
-        justify-content: flex-end;
+        grid-column: 2 / 3;
+        justify-self: end;
+        padding-right: 32px;
     }
 
     &__item {
         color: $white;
         text-decoration: none;
+        padding-left: 32px;
 
         &:hover, &:active {
             text-decoration: underline;

@@ -25,9 +25,15 @@
 }
 
 .heading {
-    font-size: 32px;
+    font-size: 24px;
+    line-height: 30px;
     width: 100%;
     margin: 0;
+
+    @include respond-to-min($desktop) {
+        font-size: 32px;
+        line-height: 30px;
+    }
 }
 
 code {

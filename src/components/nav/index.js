@@ -3,6 +3,13 @@ import { bindEvents, lifecycle, compose } from 'melody-hoc';
 import template from './index.twig';
 
 const events = bindEvents({
+    homepageLink: {
+        click(event) {
+            event.preventDefault();
+            const {changeRoute} = this.getState();
+            changeRoute('/');
+        }
+    },
     documentationLink: {
         click(event) {
             event.preventDefault();
