@@ -7,7 +7,7 @@ import Home from './pages/home';
 import Documentation from './pages/documentation';
 
 const Router = MelodyRouter({
-    ['/']: Documentation, //Home,
+    ['/']: Home,
     ['/documentation']: Documentation,
 });
 

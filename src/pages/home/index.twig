@@ -1,12 +1,9 @@
 <main>
-    <nav class="nav" ref="nav">
-        <a class="nav__logo">
-            Melody
-        </a>
-        <div class="nav_items">
-            <a class="nav__item" href="/documentation" ref="documentationLink">Documentation</a>
-        </div>
-    </nav>
+    {% mount '../../components/nav/index' with {
+        changeRoute: changeRoute,
+        isHome: true,
+        isFixed: navFixed
+    } %}
     <div class="section--primary" ref="canvasContainer">
         <section class="hero">
             <div class="hero__melody-logo">
@@ -72,7 +69,7 @@
         <div class="in-action__code-block in-action__code-block--aside"></div>
     </section>
     <div class="section--primary">
-        <section class="hero">
+        <section class="hero hero--small">
             <div class="hero__welcome">
                 <h1 class="hero__heading hero__heading--starting">Let’s get started</h1>
                 <div class="hero__download">

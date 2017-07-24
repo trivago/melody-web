@@ -2,5 +2,9 @@
 @import 'style/utility/variables';
 @import 'style/generic/normalize';
 
+// components
+@import 'components/nav/index';
+
+//pages
 @import 'pages/home/index';
 @import 'pages/documentation/index';

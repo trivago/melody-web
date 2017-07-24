@@ -2,7 +2,9 @@ import { createComponent, RECEIVE_PROPS } from 'melody-component';
 import { bindEvents, lifecycle, compose } from 'melody-hoc';
 import template from './index.twig';
 
-const initialState = {};
+const initialState = {
+    navFixed: false,
+};
 
 const stateReducer = (state = initialState, {type, payload}) => {
     switch (type) {
@@ -12,37 +14,53 @@ const stateReducer = (state = initialState, {type, payload}) => {
                 state,
                 {changeRoute: payload.changeRoute}
             );
+        case 'FIX_NAV':
+            return Object.assign(
+                {},
+                state,
+                {navFixed: true}
+            );
+        case 'UNFIX_NAV':
+            return Object.assign(
+                {},
+                state,
+                {navFixed: false}
+            );
         default:
             return state;
     }
 };
 
 const events = bindEvents({
-    documentationLink: {
-        click(event) {
-            event.preventDefault();
-            const {changeRoute} = this.getState();
-            changeRoute('/documentation');
-        }
-    }
+    
 });
 
 const mountCanvas = lifecycle({
     componentDidMount() {
         createMeteoriteShower(this.refs.canvasContainer);
-
+        console.log(this.refs.nav);
         this.scroll = () => {
             const scrollTop = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
-            const canvasBottom = this.refs.canvasContainer.clientHeight - this.refs.nav.clientHeight;
-            if(scrollTop >= canvasBottom && !this.fixed) {
-                this.fixed = true;
-                this.refs.nav.classList.add('nav--fixed');
-            } else if(scrollTop < canvasBottom && this.fixed) {
-                this.fixed = false;
-                this.refs.nav.classList.remove('nav--fixed');
+            const canvasBottom = this.refs.canvasContainer.clientHeight - 54;
+            if(scrollTop >= canvasBottom && !this.navFixed) {
+                this.navFixed = true;
+                this.dispatch({type:'FIX_NAV'});
+            } else if(scrollTop < canvasBottom && this.navFixed) {
+                this.navFixed = false;
+                this.dispatch({type:'UNFIX_NAV'});
             }
         }
         window.addEventListener('scroll', this.scroll);
+    },
+    componentDidUpdate(prevProps, prevState) {
+        const {navFixed} = this.getState();
+        if(prevState.navFixed && !navFixed) {
+            createMeteoriteShower(this.refs.canvasContainer);
+        }
+    },
+    shouldComponentUpdate() {
+        console.log('should update');
+        return false;
     },
     componentWillUnmount() {
         window.removeEventListener('scroll', this.scroll);
@@ -54,6 +72,10 @@ const enhance = compose(events, mountCanvas);
 export default enhance(createComponent(template, stateReducer));
 
 function createMeteoriteShower(canvasContainer) {
+    if(!canvasContainer) {
+        return;
+    }
+
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
     let canvasHeight = canvasContainer.clientHeight;

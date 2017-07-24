@@ -8,48 +8,6 @@ html {
     color: $purple;
 }
 
-.nav {
-    position: absolute;
-    display: flex;
-    top: 0;
-    left: 0;
-    height: 54px;
-    width: 100%;
-    letter-spacing: 1px;
-    z-index: 4;
-
-    &--fixed {
-        position: fixed;
-        background: $purple;
-        border-bottom: 3px solid $green;
-    }
-
-    &__logo {
-        flex: 1 0 auto;
-        color: $green;
-        line-height: 54px;
-        padding: 0 32px;
-        font-size: 24px;
-        cursor: pointer;
-    }
-
-    &__items {
-        flex: 1 1 auto;
-        justify-content: flex-end;
-    }
-
-    &__item {
-        color: $white;
-        text-decoration: none;
-        line-height: 54px;
-        padding: 0 32px;
-
-        &:hover, &:active {
-            text-decoration: underline;
-        }
-    }
-}
-
 .section {
     &--primary {
         background-color: $purple;
@@ -77,12 +35,19 @@ html {
     grid-template-columns: 1fr 1fr;
     position: relative;
     height: 80vh;
+    min-height: 500px;
     max-width: 900px;
     margin: 0 auto;
     align-items: center;
     justify-items: center;
     color: $white;
     z-index: 2;
+    
+    &--small {
+        height: 60vh;
+        max-height: 600px;
+        min-height: 400px;
+    }
 
     &__melody-logo {
         width: 270px;
