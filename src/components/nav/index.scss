@@ -3,7 +3,7 @@
     display: flex;
     top: 0;
     left: 0;
-    height: 54px;
+    margin: 16px 32px;
     width: 100%;
     letter-spacing: 1px;
     z-index: 4;
@@ -21,10 +21,6 @@
 
     &__logo {
         flex: 1 0 auto;
-        color: $green;
-        line-height: 54px;
-        padding: 0 32px;
-        font-size: 24px;
         cursor: pointer;
     }
 
@@ -36,8 +32,6 @@
     &__item {
         color: $white;
         text-decoration: none;
-        line-height: 54px;
-        padding: 0 32px;
 
         &:hover, &:active {
             text-decoration: underline;

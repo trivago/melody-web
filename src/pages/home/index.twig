@@ -7,7 +7,7 @@
     <div class="bg--purple hero__wrapper" ref="canvasContainer">
         <section class="hero">
             <div class="hero__melody-logo">
-                 {#svg icon#}
+                 {% include '../../style/icons/icn-logo_hero.html.twig' %}
             </div>
             <div class="hero__welcome">
                 <h1 class="hero__heading">Melody is a fast and memory efficient library for creating highly dynamic user interfaces</h1>
@@ -24,27 +24,39 @@
     <section class="nutshell nutshell__wrapper bg--white">
         <h2 class="heading heading--primary">In a nutshell</h2>
         <article class="nutshell__item">
-            <img src="http://placehold.it/180x180" class="nutshell__image" />
+            <span class="nutshell__image">
+                {% include '../../style/icons/icn-smaller.html.twig' %}
+            </span>
             <p class="nutshell__description">Melody is small, only 15kb, making it fast for the browser to download and parse.</p>
         </article>
         <article class="nutshell__item">
-            <img src="http://placehold.it/180x180" class="nutshell__image" />
+            <span class="nutshell__image">
+                {% include '../../style/icons/icn-error_messages.html.twig' %}
+            </span>
             <p class="nutshell__description nutshell__description--middle">Melody's compiler supports you by giving you understandable and accurate error messages whenever it cannot make sense of a template.</p>
         </article>
         <article class="nutshell__item">
-            <img src="http://placehold.it/180x180" class="nutshell__image" />
+            <span class="nutshell__image">
+                {% include '../../style/icons/icn-battle_tested.html.twig' %}
+            </span>
             <p class="nutshell__description">Live in production to millions of trivago users worldwide.</p>
         </article>
         <article class="nutshell__item">
-            <img src="http://placehold.it/180x180" class="nutshell__image" />
+            <span class="nutshell__image">
+                {% include '../../style/icons/icn-flexible.html.twig' %}
+            </span>
             <p class="nutshell__description">Melody was designed in a modular fashion from the ground up. You can change what goes in, like a different template language, and you are in control what comes out: If you need a different view layer, that's no problem.</p>
         </article>
         <article class="nutshell__item">
-            <img src="http://placehold.it/180x180" class="nutshell__image" />
+            <span class="nutshell__image">
+                {% include '../../style/icons/icn-faster.html.twig' %}
+            </span>
             <p class="nutshell__description nutshell__description--middle">Melody is among the fastest UI libraries out there. Because of its adaptive rendering and memory efficiency, garbage collection is kept at a minimum, giving the browser lots of time to draw smooth and responsive user interfaces.</p>
         </article>
         <article class="nutshell__item">
-            <img src="http://placehold.it/180x180" class="nutshell__image" />
+            <span class="nutshell__image">
+                {% include '../../style/icons/icn-structured.html.twig' %}
+            </span>
             <p class="nutshell__description">Melody provides an API (or set of functions) to enhance your views, it leverages functional programming to help you to create better structure for your applications.</p>
         </article>
     </section>
@@ -85,7 +97,7 @@
                 <p>Dive deeper and read the <span class="highlight">documentation</span></p>
             </div>
             <div class="hero__melody-logo">
-                {# svg icon #}
+                {% include '../../style/icons/icn-logo_hero.html.twig' %}
             </div>
         </section>
     </div>
