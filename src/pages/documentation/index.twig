@@ -33,6 +33,20 @@
                 Melody limits the expressiveness provided by Twig in order to generate highly efficient DOM instructions. As a general rule of thumb, you should write valid HTML templates which contains Twig expressions.
                 See the Twig section for further information.
             </p>
+
+            <h2>Exporting an element to a Component</h2>
+            <p>
+                Often, it will be useful to export an element so that a component can gain access to it.
+                In Melody, this can be done through the ref attribute:
+            </p>
+
+            <pre>
+                <code>
+                    &lt;button ref="reviewTrigger">Reviews &lt; /button>
+                </code>
+            </pre>
+
+            <p>This will make the element available within the component.</p>
         </article>
     </main>
 </div>

@@ -4,25 +4,62 @@
     height: 100vh;
     width: 900px;
     margin: 0 auto;
-
-    
+    grid-template-rows: 63px 1fr;
+    grid-gap: 32px;
 }
 
 .side-menu {
-    padding: 75px 32px;
     display: none;
+    grid-row: 2;
 
     @include respond-to-min($tablet-large) {
         display: block;
         grid-column: 1 / 3;
     }
+
+    h3 {
+        margin:0;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0 0 32px;
+        color: #37454d;
+    }
+
+    li {
+        margin-top: 12px;
+        cursor: pointer;
+    }
 }
 
 .docs-content {
-    padding: 75px 32px;
     grid-column: 1 / 6;
+    grid-row: 2;
 
     @include respond-to-min($tablet-large) {
         grid-column: 3 / 7;
+    }
+
+    h2 {
+        margin: 32px 0 0;
+        font-size: 20px;
+
+        &:first-of-type {
+            margin: 0;
+        }
+    }
+
+    p {
+        margin: 12px 0;
+        color: #37454d;
+        line-height: 1.5;
+    }
+
+    pre {
+        padding: 28px 32px;
+        background-color: $dark-blue;
+        color: $white;
     }
 }
