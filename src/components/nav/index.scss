@@ -25,14 +25,13 @@
     &__logo {
         grid-column: 1 / 2;
         cursor: pointer;
-        padding-left: 32px;
+        margin-left: 32px;
     }
 
     &__items {
         grid-column: 2 / 3;
         justify-self: end;
-        padding-right: 32px;
-        margin-top: -2px;
+        margin-right: 32px;
         font-size: 14px;
         font-weight: bold;
     }
@@ -41,9 +40,17 @@
         color: $white;
         text-decoration: none;
         padding-left: 32px;
+        margin-top: -2px;
 
         &:hover, &:active {
             text-decoration: underline;
         }
+    }
+
+    &__menu {
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        cursor: pointer;
     }
 }
