@@ -38,15 +38,14 @@ const events = bindEvents({
 const mountCanvas = lifecycle({
     componentDidMount() {
         createMeteoriteShower(this.refs.canvasContainer);
-        console.log(this.refs.nav);
+
         this.scroll = () => {
             const scrollTop = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
             const canvasBottom = this.refs.canvasContainer.clientHeight - 54;
-            if(scrollTop >= canvasBottom && !this.navFixed) {
-                this.navFixed = true;
+            const {navFixed} = this.getState();
+            if(scrollTop >= canvasBottom && !navFixed) {
                 this.dispatch({type:'FIX_NAV'});
-            } else if(scrollTop < canvasBottom && this.navFixed) {
-                this.navFixed = false;
+            } else if(scrollTop < canvasBottom && navFixed) {
                 this.dispatch({type:'UNFIX_NAV'});
             }
         }
@@ -57,10 +56,6 @@ const mountCanvas = lifecycle({
         if(prevState.navFixed && !navFixed) {
             createMeteoriteShower(this.refs.canvasContainer);
         }
-    },
-    shouldComponentUpdate() {
-        console.log('should update');
-        return false;
     },
     componentWillUnmount() {
         window.removeEventListener('scroll', this.scroll);

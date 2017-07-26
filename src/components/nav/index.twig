@@ -1,12 +1,54 @@
-<nav class="nav{{isHome and not isFixed ? ' nav--inverse' }}{{isFixed ? ' nav--fixed' }}">
-    <a class="nav__logo" ref="homepageLink">
-        {% include '../../style/icons/icn-logo_header.html.twig' %}
-    </a>
-    <div class="nav__items">
-        {#<a class="nav__item" href="/documentation" ref="documentationLink">Documentation</a>#}
-        <span class="nav__menu">
-            {% include '../../style/icons/icn-hamburger.html.twig' %}
-            {#{% include '../../style/icons/icn-close.html.twig' %}#}
-        </span>
-    </div>
-</nav>
+<header>
+  <nav class="nav{{isHome and not isFixed ? ' nav--inverse' }}{{isFixed ? ' nav--fixed' }}">
+      <a class="nav__logo" ref="homepageLink">
+          {% include '../../style/icons/icn-logo_header.html.twig' %}
+      </a>
+      <div class="nav__items">
+          {% if hasSideMenu %}
+              <span class="nav__menu" ref="toggleMenu">
+                {% if menuOpen %}
+                  {% include '../../style/icons/icn-close.html.twig' %}
+                {% else %}
+                  {% include '../../style/icons/icn-hamburger.html.twig' %}
+                {% endif %}
+              </span>
+          {% else %}
+              <a class="nav__item" href="/documentation" ref="documentationLink">Documentation</a>
+          {% endif %}
+      </div>
+  </nav>
+  {% if hasSideMenu %}
+  <aside class="side-menu{{menuOpen ? ' side-menu--open'}}{{menuHidden ? ' hidden'}}" ref="sideMenu">
+      <div class="side-menu__wrapper">
+          <h3>General</h3>
+          <ul>
+              <li>What is Melody?</li>
+              <li>Your first Melody app</li>
+          </ul>
+
+          <h3>Introduction</h3>
+          <ul>
+              <li>Actions</li>
+              <li>Reducers</li>
+              <li>Mixins</li>
+              <li>Middleware</li>
+          </ul>
+
+          <h3>Redux Integration</h3>
+          <ul>
+              <li>Provide</li>
+              <li>Connect</li>
+              <li>Redux-thunk</li>
+              <li>Redux-saga</li>
+          </ul>
+
+          <h3>Twig</h3>
+          <ul>
+              <li>Attributes</li>
+              <li>Classes</li>
+              <li>Loops</li>
+          </ul>
+      </div>
+  </aside>
+  {% endif %}
+</header>

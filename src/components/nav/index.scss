@@ -52,5 +52,9 @@
         height: 24px;
         display: inline-block;
         cursor: pointer;
+
+        @include respond-to-min($tablet-large) {
+            display: none;
+        }
     }
 }
