@@ -1,20 +1,17 @@
-<header>
+<header class="header">
   <nav class="nav{{isHome and not isFixed ? ' nav--inverse' }}{{isFixed ? ' nav--fixed' }}">
       <a class="nav__logo" ref="homepageLink">
           {% include '../../style/icons/icn-logo_header.html.twig' %}
       </a>
       <div class="nav__items">
-          {% if hasSideMenu %}
-              <span class="nav__menu" ref="toggleMenu">
-                {% if menuOpen %}
-                  {% include '../../style/icons/icn-close.html.twig' %}
-                {% else %}
-                  {% include '../../style/icons/icn-hamburger.html.twig' %}
-                {% endif %}
-              </span>
-          {% else %}
-              <a class="nav__item" href="/documentation" ref="documentationLink">Documentation</a>
-          {% endif %}
+          <span class="nav__menu" ref="toggleMenu">
+            {% if menuOpen %}
+              {% include '../../style/icons/icn-close.html.twig' %}
+            {% else %}
+              {% include '../../style/icons/icn-hamburger.html.twig' %}
+            {% endif %}
+          </span>
+          <a class="nav__item" href="/documentation" ref="documentationLink">Documentation</a>
       </div>
   </nav>
   {% if hasSideMenu %}

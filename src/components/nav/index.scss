@@ -37,13 +37,18 @@
     }
 
     &__item {
-        color: $white;
-        text-decoration: none;
-        padding-left: 32px;
-        margin-top: -2px;
+        display: none;
 
-        &:hover, &:active {
-            text-decoration: underline;
+        @include respond-to-min($tablet-large) {
+            display: block;
+            color: $white;
+            text-decoration: none;
+            padding-left: 32px;
+            margin-top: -2px;
+
+            &:hover, &:active {
+                text-decoration: underline;
+            }
         }
     }
 
