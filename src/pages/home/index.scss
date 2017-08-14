@@ -1,3 +1,24 @@
+.main-wrapper {
+    @include respond-to-min($desktop) {
+        position: relative;
+    }
+
+    &:before {
+        @include respond-to-min($desktop) {
+           @include melodic-background(left);
+            box-shadow:inset -12px 0 15px -4px rgba(255, 255, 255, 0.75);
+        }
+    }
+
+    &:after {
+        @include respond-to-min($desktop) {
+            @include melodic-background(right);
+            box-shadow:inset 12px 0 15px -4px rgba(255, 255, 255, 0.75);
+            transform:rotate(-180deg);
+        }
+    }
+}
+
 .hero {
     display: grid;
     position: relative;
@@ -20,9 +41,27 @@
         justify-items: center;
     }
 
+    &__wrapper {
+        &--small {
+            position: relative;
+
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0.25;
+                background: url('/melodic-pattern.svg') repeat-y;
+                background-size: cover;
+            }
+        }
+    }
+
     &--small {
         height: auto;
-
+        //background-color: $purple;
 
         @include respond-to-min($desktop) {
             .hero__melody-logo {

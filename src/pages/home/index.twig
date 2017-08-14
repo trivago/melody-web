@@ -1,11 +1,11 @@
-<main>
+<main class="main-wrapper">
     {% mount '../../components/nav/index' with {
         changeRoute: changeRoute,
         isHome: true,
         isFixed: navFixed,
         hasSideMenu: false,
     } %}
-    <div class="bg--purple hero__wrapper" ref="canvasContainer">
+    <div class="bg--purple" ref="canvasContainer">
         <section class="hero">
             <div class="hero__melody-logo">
                  {% include '../../style/icons/icn-logo_hero.html.twig' %}

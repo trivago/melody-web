@@ -64,6 +64,7 @@ code {
     }
     &--white {
         padding: 32px 0;
+        background-color: $white;
 
         @include respond-to-min($desktop) {
             padding: 48px 0;
