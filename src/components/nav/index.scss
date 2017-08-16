@@ -37,29 +37,41 @@
     }
 
     &__item {
-        display: none;
+        display: block;
+        color: $white;
+        text-decoration: none;
+        padding-left: 32px;
+        margin-top: -2px;
 
-        @include respond-to-min($tablet-large) {
-            display: block;
-            color: $white;
-            text-decoration: none;
-            padding-left: 32px;
-            margin-top: -2px;
-
-            &:hover, &:active {
-                text-decoration: underline;
-            }
+        &:hover, &:active {
+            text-decoration: underline;
         }
     }
 
     &__menu {
-        width: 24px;
-        height: 24px;
-        display: inline-block;
-        cursor: pointer;
+        display: none;
+    }
+}
+// docs only navigation
+.docs {
+    .nav {
+        &__menu {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            cursor: pointer;
 
-        @include respond-to-min($tablet-large) {
+            @include respond-to-min($tablet-large) {
+                display: none;
+            }
+        }
+
+        &__item {
             display: none;
+
+            @include respond-to-min($tablet-large) {
+                display: block;
+            }
         }
     }
 }

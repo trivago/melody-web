@@ -50,6 +50,22 @@ const stateReducer = (state = initialState, {type, payload}) => {
     }
 };
 
+const widthListener = lifecycle({
+    componentDidMount() {
+        const content = document.querySelector('.docs-content');
+        this.resizeListener = () => {
+            // debugger;
+            if(window.innerWidth >= 700 && content && content.classList.contains('hidden')) {
+                content.classList.remove('docs-content--scaled', 'hidden');
+            }
+        };
+        window.addEventListener('resize', this.resizeListener);
+    },
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.resizeListener);
+    }
+})
+
 const events = bindEvents({
     homepageLink: {
         click(event) {
@@ -101,4 +117,6 @@ const events = bindEvents({
     }
 });
 
-export default events(createComponent(template, stateReducer));
+const enhance = compose(events, widthListener);
+
+export default enhance(createComponent(template, stateReducer));
