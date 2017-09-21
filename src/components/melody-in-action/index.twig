@@ -1,0 +1,58 @@
+<section class="in-action in-action__wrapper bg--white">
+  <h2 class="heading heading--primary">Melody in action</h2>
+  <div class="in-action__code-block in-action__code-block--demo">
+    {% mount '../todo-example-app/TodoList' %}
+  </div>
+  <div class="in-action__code-block">
+    <div class="filename">TodoList.twig</div>
+    <pre>
+        <code class="hljs html">
+{{ '<form ref="{{ form }}" action="javascript:;">
+  <input value="{{ text }}" ref="{{ input }}" />
+  <button ref="{{ add }}" type="submit">Add</button>
+  <ul>
+    {% for todo in todos %}
+      <li>{{ todo }}</li>
+    {% endfor %}
+  </ul>
+</form>' }}
+        </code>
+    </pre>
+  </div>
+  <div class="in-action__code-block in-action__code-block--large">
+    <div class="filename">TodoList.js</div>
+    <pre>
+    <code class="hljs javascript">import {render, createComponent, RECEIVE_PROPS} from 'melody-component';
+import {bindEvents} from 'melody-hoc';
+import template from './TodoList.twig';
+
+const stateReducer = (state = {todos: ['Read docs'], text: ''}, {type, payload}) => {
+  switch (type) {
+    case RECEIVE_PROPS: return {...state, ...payload};
+    case 'TEXT_CHANGE': return {...state, text: payload};
+    case 'ADD_TODO':
+      const {todos, text} = state;
+      return {...state, todos: todos.concat(text), text: ''};
+  }
+  return state;
+};
+
+const enhance = bindEvents({
+  form: {
+    submit(event, {dispatch, getState}) {
+      event.preventDefault();
+      if(getState().text == '') return;
+      dispatch({type: 'ADD_TODO'});
+    }
+  },
+  input: {
+    input(event, {dispatch}) {
+      dispatch({type: 'TEXT_CHANGE', payload: event.target.value});
+    }
+  }
+});
+
+export default enhance(createComponent(template, stateReducer));</code>
+    </pre>
+  </div>
+</section>

@@ -1,0 +1,9 @@
+<form ref="{{ form }}" action="javascript:;">
+  <input value="{{ text }}" ref="{{ input }}" />
+  <button ref="{{ add }}" type="submit">Add</button>
+  <ul>
+    {% for todo in todos %}
+        <li>{{ todo }}</li>
+    {% endfor %}
+  </ul>
+</form>

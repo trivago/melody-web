@@ -9,23 +9,20 @@ const initialState = {
 const stateReducer = (state = initialState, {type, payload}) => {
     switch (type) {
         case RECEIVE_PROPS:
-            return Object.assign(
-                {},
-                state,
-                {changeRoute: payload.changeRoute}
-            );
-        case 'FIX_NAV':
-            return Object.assign(
-                {},
-                state,
-                {navFixed: true}
-            );
+            return {
+                ...state,
+                ...payload
+            };
+        case 'FIX_NAV': 
+            return {
+                ...state,
+                navFixed: true
+            };
         case 'UNFIX_NAV':
-            return Object.assign(
-                {},
-                state,
-                {navFixed: false}
-            );
+            return {
+                ...state,
+                navFixed: false
+            };
         default:
             return state;
     }
@@ -62,7 +59,7 @@ const mountCanvas = lifecycle({
     }
 });
 
-const enhance = compose(events, mountCanvas);
+const enhance = compose(refs, events, mountCanvas);
 
 export default enhance(createComponent(template, stateReducer));
 
@@ -78,7 +75,7 @@ function createMeteoriteShower(canvasContainer) {
     let shouldAnimate = canvasWidth >= 900;
     let animating;
 
-    const numberOfMeteorites = Math.round(canvasWidth / 12);
+    const numberOfMeteorites = Math.round(canvasWidth / 25);
     const colours = ['#6eceb2', '#272361'];
     const showerAngle = Math.PI / 3.5;
 
@@ -98,7 +95,7 @@ function createMeteoriteShower(canvasContainer) {
 
     class Meteorite {
         constructor() {
-            this.h = 20 + Math.random() * 25;
+            this.h = 25 + Math.random() * 25;
             this.x = Math.random() * canvasWidth * 1.5;
             this.y = Math.random() * canvasHeight * 1.5;
             this.vx = -1.5;
@@ -112,25 +109,25 @@ function createMeteoriteShower(canvasContainer) {
             this.y = -(Math.random() * canvasHeight);
             this.h = 20 + Math.random() * 25;
             this.colour = colours[Math.round(Math.random())];
-            this.isCircle = Math.random() < 0.35;
+            this.isCircle = Math.random() < 0.15;
         };
     };
 
-    const meteorites = Array.from({length: numberOfMeteorites}, () => new Meteorite());
+    const meteorites = Array.from({length: numberOfMeteorites}, () => new Meteorite);
 
     const createLine = (ctx, x, y, h) => {
         const angle = showerAngle * h;
         ctx.beginPath();
-        ctx.moveTo(x+2.5, y);
-        ctx.arcTo(x+5, y, x+5, y+h, 2.5);
-        ctx.arcTo(x+5-angle, y+h, x-angle, y+h, 2.5);
-        ctx.arcTo(x-angle, y+h, x-angle, y, 2.5);
-        ctx.arcTo(x, y, x+5, y, 2.5);
+        ctx.moveTo(x+5, y);
+        ctx.arcTo(x+10, y, x+10, y+h, 5);
+        ctx.arcTo(x+10-angle, y+h, x-angle, y+h, 5);
+        ctx.arcTo(x-angle, y+h, x-angle, y, 5);
+        ctx.arcTo(x, y, x+10, y, 5);
         ctx.closePath();
     };
     const createCircle = (ctx, x, y, r) => {
         ctx.beginPath();
-        ctx.arc(x, y, r, 0, 50, false);
+        ctx.arc(x, y, r, 0, 80, false);
         ctx.closePath();
     };
 
@@ -141,8 +138,8 @@ function createMeteoriteShower(canvasContainer) {
         meteorites.forEach(meteorite => {
             meteorite.x += meteorite.vx;
             meteorite.y += meteorite.vy;
-            if(meteorite.isCircle === true) {
-                createCircle(ctx, meteorite.x, meteorite.y, meteorite.h / 2.5);
+            if(meteorite.isCircle) {
+                createCircle(ctx, meteorite.x, meteorite.y, meteorite.h / 1.8);
             } else {
                 createLine(ctx, meteorite.x, meteorite.y, meteorite.h);
             }
@@ -152,7 +149,7 @@ function createMeteoriteShower(canvasContainer) {
                 meteorite.reset();
             }
         });
-        if (shouldAnimate === true) {
+        if (shouldAnimate) {
             requestAnimationFrame(animate);
         } else {
             animating = false;

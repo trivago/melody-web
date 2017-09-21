@@ -2096,6 +2096,10 @@ he@^1.1.0:
   version "1.1.1"
   resolved "http://npm.pkg.trivago.trv:8080/h/he/_attachments/he-1.1.1.tgz#93410fd21b009735151f8868c2f271f3427e23fd"
 
+highlight.js@^9.12.0:
+  version "9.12.0"
+  resolved "http://npm.pkg.trivago.trv:8080/h/highlight.js/_attachments/highlight.js-9.12.0.tgz#e6d9dbe57cbefe60751f02af336195870c90c01e"
+
 hmac-drbg@^1.0.0:
   version "1.0.1"
   resolved "http://npm.pkg.trivago.trv:8080/h/hmac-drbg/_attachments/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"
@@ -2502,7 +2506,7 @@ loader-runner@^2.3.0:
   version "2.3.0"
   resolved "http://npm.pkg.trivago.trv:8080/l/loader-runner/_attachments/loader-runner-2.3.0.tgz#f482aea82d543e07921700d5a46ef26fdac6b8a2"
 
-loader-utils@^0.2.14, loader-utils@^0.2.15, loader-utils@^0.2.16:
+loader-utils@^0.2.15, loader-utils@^0.2.16:
   version "0.2.17"
   resolved "http://npm.pkg.trivago.trv:8080/l/loader-utils/_attachments/loader-utils-0.2.17.tgz#f86e6374d43205a6e6c60e9196f17c0299bfb348"
   dependencies:
@@ -2511,7 +2515,7 @@ loader-utils@^0.2.14, loader-utils@^0.2.15, loader-utils@^0.2.16:
     json5 "^0.5.0"
     object-assign "^4.0.1"
 
-loader-utils@^1.0.2:
+loader-utils@^1.0.2, loader-utils@^1.1.0:
   version "1.1.0"
   resolved "http://npm.pkg.trivago.trv:8080/l/loader-utils/_attachments/loader-utils-1.1.0.tgz#c98aef488bcceda2ffb5e2de646d6a754429f5cd"
   dependencies:
@@ -2601,88 +2605,98 @@ media-typer@0.3.0:
   version "0.3.0"
   resolved "http://npm.pkg.trivago.trv:8080/m/media-typer/_attachments/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
 
-melody-code-frame@^0.10.10:
-  version "0.10.10"
-  resolved "http://npm.pkg.trivago.trv:8080/m/melody-code-frame/_attachments/melody-code-frame-0.10.10.tgz#6b5d1146f4c83ded6f560dde8336c95c3f1d6ebe"
+melody-code-frame@^0.11.1-rc.1:
+  version "0.11.1-rc.1"
+  resolved "http://npm.pkg.trivago.trv:8080/m/melody-code-frame/_attachments/melody-code-frame-0.11.1-rc.1.tgz#3aede307eaa8b7cea9f09909fcf8dfd18dcb4b28"
   dependencies:
     lodash "^4.15.0"
 
-melody-compiler@^0.10.13:
-  version "0.10.13"
-  resolved "http://npm.pkg.trivago.trv:8080/m/melody-compiler/_attachments/melody-compiler-0.10.13.tgz#a71e1b336039cca011191c6f1db0ab289872d798"
+melody-compiler@^0.11.1-rc.1:
+  version "0.11.1-rc.1"
+  resolved "http://npm.pkg.trivago.trv:8080/m/melody-compiler/_attachments/melody-compiler-0.11.1-rc.1.tgz#96d83796d0198075cf1d0ecea4caa02684fec8cc"
   dependencies:
     babel-generator "6.10.x"
     babel-template "^6.8.0"
     babel-types "^6.8.1"
     lodash "^4.12.0"
-    melody-code-frame "^0.10.10"
+    melody-code-frame "^0.11.1-rc.1"
     random-seed "^0.3.0"
 
-melody-component@^0.10, melody-component@^0.10.10:
-  version "0.10.10"
-  resolved "http://npm.pkg.trivago.trv:8080/m/melody-component/_attachments/melody-component-0.10.10.tgz#1181a74e4ac3c24019a361930d3a3206e835912e"
+melody-component@^0.11.1-rc.1:
+  version "0.11.1-rc.1"
+  resolved "http://npm.pkg.trivago.trv:8080/m/melody-component/_attachments/melody-component-0.11.1-rc.1.tgz#1fc7eb2741420616790d421063136b145ad8697e"
 
-melody-extension-core@^0.10.12:
-  version "0.10.12"
-  resolved "http://npm.pkg.trivago.trv:8080/m/melody-extension-core/_attachments/melody-extension-core-0.10.12.tgz#9fa473a1f49e63ece50396086f1e9d1cf91e0353"
+melody-devtools@^0.11.1-rc.1:
+  version "0.11.1-rc.1"
+  resolved "http://npm.pkg.trivago.trv:8080/m/melody-devtools/_attachments/melody-devtools-0.11.1-rc.1.tgz#434619d920cddc436cb53526cdfa4208a2a30024"
+
+melody-extension-core@^0.11.1-rc.1:
+  version "0.11.1-rc.1"
+  resolved "http://npm.pkg.trivago.trv:8080/m/melody-extension-core/_attachments/melody-extension-core-0.11.1-rc.1.tgz#2a5d4cdc612ca3773e391fca964169be61edf223"
   dependencies:
     babel-template "^6.8.0"
     babel-types "^6.8.1"
     lodash "^4.12.0"
     shortid "^2.2.6"
 
-melody-hoc@^0.10:
-  version "0.10.11"
-  resolved "http://npm.pkg.trivago.trv:8080/m/melody-hoc/_attachments/melody-hoc-0.10.11.tgz#1e87c614b96f004bd0c12ad18db0e7ac17ac219c"
+melody-hoc@^0.11.1-rc.1:
+  version "0.11.1-rc.1"
+  resolved "http://npm.pkg.trivago.trv:8080/m/melody-hoc/_attachments/melody-hoc-0.11.1-rc.1.tgz#85653084c8cd3cf2b0d944220b9cd03e6947ccc8"
   dependencies:
     lodash "^4.15.0"
-    melody-component "^0.10.10"
+    melody-component "^0.11.1-rc.1"
 
-melody-idom@^0.10:
-  version "0.10.11"
-  resolved "http://npm.pkg.trivago.trv:8080/m/melody-idom/_attachments/melody-idom-0.10.11.tgz#5901b4a5b751621404f9377e54cffe288de17af5"
+melody-idom@^0.11.1-rc.1:
+  version "0.11.1-rc.1"
+  resolved "http://npm.pkg.trivago.trv:8080/m/melody-idom/_attachments/melody-idom-0.11.1-rc.1.tgz#9fff905b8a56cd96dd84a107c30939e2d6aa9b8f"
   dependencies:
     lodash "^4.12.0"
 
-melody-loader@^0.10:
-  version "0.10.13"
-  resolved "http://npm.pkg.trivago.trv:8080/m/melody-loader/_attachments/melody-loader-0.10.13.tgz#eb4e8154a46374bd13e7371a43b96a9b32e1f585"
+melody-loader@^0.11.1-rc.1:
+  version "0.11.1-rc.1"
+  resolved "http://npm.pkg.trivago.trv:8080/m/melody-loader/_attachments/melody-loader-0.11.1-rc.1.tgz#d05b38e76dbb8a1f2c96ae935106ae231f6f56ea"
   dependencies:
-    loader-utils "^0.2.14"
+    loader-utils "^1.1.0"
     lodash "^4.12.0"
-    melody-compiler "^0.10.13"
-    melody-extension-core "^0.10.12"
-    melody-runtime "^0.10.10"
+    melody-compiler "^0.11.1-rc.1"
+    melody-extension-core "^0.11.1-rc.1"
+    melody-runtime "^0.11.1-rc.1"
 
-melody-parser@^0.10:
-  version "0.10.10"
-  resolved "http://npm.pkg.trivago.trv:8080/m/melody-parser/_attachments/melody-parser-0.10.10.tgz#d35ff02ad9f95aa5af3f5263d77a01727d6a6ce0"
+melody-parser@^0.11.1-rc.1:
+  version "0.11.1-rc.1"
+  resolved "http://npm.pkg.trivago.trv:8080/m/melody-parser/_attachments/melody-parser-0.11.1-rc.1.tgz#95f2d9ed5e0e8c582a90af044a8900194206620b"
   dependencies:
     he "^1.1.0"
     lodash "^4.12.0"
-    melody-code-frame "^0.10.10"
+    melody-code-frame "^0.11.1-rc.1"
 
-melody-runtime@^0.10.10:
-  version "0.10.10"
-  resolved "http://npm.pkg.trivago.trv:8080/m/melody-runtime/_attachments/melody-runtime-0.10.10.tgz#7f5f239f79d5dc7f3a6383b9f951b3eb4c5aa3c6"
-  dependencies:
-    lodash "^4.12.0"
-
-melody-traverse@^0.10:
-  version "0.10.10"
-  resolved "http://npm.pkg.trivago.trv:8080/m/melody-traverse/_attachments/melody-traverse-0.10.10.tgz#ed153daf18021237ddb235812544f22932f9f153"
-
-melody-types@^0.10:
-  version "0.10.10"
-  resolved "http://npm.pkg.trivago.trv:8080/m/melody-types/_attachments/melody-types-0.10.10.tgz#fdee69180e47961cf13d2c6ea5bdc7cf3dbfd0cb"
+melody-plugin-idom@0.11.1-rc.1:
+  version "0.11.1-rc.1"
+  resolved "http://npm.pkg.trivago.trv:8080/m/melody-plugin-idom/_attachments/melody-plugin-idom-0.11.1-rc.1.tgz#7b8d0902b7df27402c68f0661c9a5ad4669c6a1b"
   dependencies:
     babel-types "^6.8.1"
 
-melody-util@^0.10:
-  version "0.10.11"
-  resolved "http://npm.pkg.trivago.trv:8080/m/melody-util/_attachments/melody-util-0.10.11.tgz#34a296097aa214841cdc2237596a52e392f01fef"
+melody-runtime@^0.11.1-rc.1:
+  version "0.11.1-rc.1"
+  resolved "http://npm.pkg.trivago.trv:8080/m/melody-runtime/_attachments/melody-runtime-0.11.1-rc.1.tgz#53b461c2e7d39a899d62afb58176d15cb96a5ff2"
   dependencies:
-    melody-component "^0.10.10"
+    lodash "^4.12.0"
+
+melody-traverse@^0.11.1-rc.1:
+  version "0.11.1-rc.1"
+  resolved "http://npm.pkg.trivago.trv:8080/m/melody-traverse/_attachments/melody-traverse-0.11.1-rc.1.tgz#6a9d5776d3f16a5cb9810c7bbbf018044ee168e0"
+
+melody-types@^0.11.1-rc.1:
+  version "0.11.1-rc.1"
+  resolved "http://npm.pkg.trivago.trv:8080/m/melody-types/_attachments/melody-types-0.11.1-rc.1.tgz#9923d1a727f3098c0297fd553bd58068b3744c74"
+  dependencies:
+    babel-types "^6.8.1"
+
+melody-util@^0.11.1-rc.1:
+  version "0.11.1-rc.1"
+  resolved "http://npm.pkg.trivago.trv:8080/m/melody-util/_attachments/melody-util-0.11.1-rc.1.tgz#130c7bb02b78bf7caf1ec269d4c58f4710ab2af0"
+  dependencies:
+    melody-component "^0.11.1-rc.1"
 
 memory-fs@^0.4.0, memory-fs@~0.4.1:
   version "0.4.1"

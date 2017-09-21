@@ -30,23 +30,20 @@ export default routes => {
     const stateReducer = (state = initialState, {type, payload}) => {
         switch (type) {
             case 'CHANGE_ROUTE':
-                return Object.assign(
-                    {},
-                    state,
-                    {
-                        ChildComponent: state.routes[payload.path] || null,
-                        ChildComponentKey: [payload.path].concat(payload.params).join('::'),
-                        params: payload.params
-                    }
-                );
+                return {
+                    ...state,
+                    ChildComponent: state.routes[payload.path] || null,
+                    ChildComponentKey: [payload.path, ...payload.params].join('::'),
+                    params: payload.params
+                };
             default:
                 return state;
         }
     };
 
     const changeRouteReducer = dispatch => ({
-        changeRoute(path, ...params) {
-            const url = [path].concat(...params).join('/');
+        changeRoute(path, params = []) {
+            const url = [path, ...params].join('/');
             window.history.pushState(null, '', url);
             dispatch(changeRoute(path, params));
         }
@@ -61,20 +58,20 @@ export default routes => {
         componentDidMount() {
             this.changeRoute = () => {
                 const routes = this.getState().routes;
-                const pathName = window.location.pathname;
+                const {pathname} = window.location;
 
                 for (let route in routes) {
                     if (!routes.hasOwnProperty(route)) {
                         continue;
                     }
 
-                    if (pathName === route) {
+                    if (pathname === route) {
                         this.dispatch(changeRoute(route));
                         return;
                     }
 
-                    if (pathName.indexOf(route + '/') === 0) {
-                        const params = pathName.substr(route.length + 1).split('/');
+                    if (pathname.indexOf(route + '/') === 0) {
+                        const params = pathname.substr(route.length + 1).split('/');
                         this.dispatch(changeRoute(route, params));
                         return;
                     }

@@ -36,9 +36,39 @@
     }
 }
 
-code {
-    font-family: "Andale Mono",AndaleMono,"Lucida Console","Lucida Sans Typewriter",monospace;
+code, pre.code {
+    // font-family: "Andale Mono",AndaleMono,"Lucida Console","Lucida Sans Typewriter",monospace;
+    font-family: Consolas, Monaco, monospace;
+    font-size: 14px;
     line-height: 1.5;
+
+    .hljs-keyword {
+        color: $green;
+    }
+
+    .hljs-string {
+        color: #fff;
+    }
+
+    .hljs-attr {
+        color: $green;
+    }
+
+    .hljs-function {
+        color: $green;
+    }
+
+    .hljs-tag {
+        color: $green;
+    }
+
+    .hljs-params {
+        color: #fff;
+    }
+
+    .hljs-comment {
+        color: #aaa;
+    }
 }
 
 .bg {

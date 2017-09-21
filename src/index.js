@@ -1,10 +1,14 @@
 import { render } from 'melody-component';
+import { initDevTools } from 'melody-devtools';
+
 import MelodyRouter from './components/router';
-import './components/serviceworker';
+// import './components/serviceworker';
 import './base.scss';
 
 import Home from './pages/home';
 import Documentation from './pages/documentation';
+
+initDevTools();
 
 const Router = MelodyRouter({
     ['/']: Home,

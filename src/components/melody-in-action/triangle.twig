@@ -1,0 +1,28 @@
+{% set targetSize = 25 %}
+{% if s <= targetSize %}
+  {% include './dot.twig' with {
+    x: x - (targetSize / 2),
+    y: y - (targetSize / 2),
+    size: targetSize,
+    text: seconds
+  } only %}
+{% else %}
+  {% include './triangle.twig' with {
+    x: x,
+    y: y - (s / 2),
+    size: targetSize,
+    text: seconds
+  } only %}
+  {% include './triangle.twig' with {
+    x: x - s,
+    y: y + (s / 2),
+    size: targetSize,
+    text: seconds
+  } only %}
+  {% include './triangle.twig' with {
+    x: x + s,
+    y: y + (s / 2),
+    size: targetSize,
+    text: seconds
+  } only %}
+{% endif %}

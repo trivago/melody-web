@@ -1,40 +1,14 @@
 <div class="docs">
     {% mount '../../components/nav/index' with {
         changeRoute: changeRoute,
+        params: params,
         isHome: false,
         isFixed: false,
         hasSideMenu: true,
     } %}
     <main class="docs-content">
         <article>
-            <h2>What is Melody</h2>
-            <p>
-                Melody is a UI framework for JavaScript applications.
-                It helps you to write solid, high performance applications following best practices and with a clear separation of concerns. The view layer is cleanly delegated to templates (Twig) which it compiles to highly efficient JavaScript DOM patching instructions.
-                This approach allows you to keep unchanged DOM nodes, reduces the memory usage of your application and improves the rendering performance of both, your application and the browser rendering it.
-                The preferred data layer for Melody applications is Redux and the component API provided by Melody actually follows many of the same ideas as Redux.
-            </p>
-
-            <h2>Twig</h2>
-            <p>
-                Twig is the standard templating language used by the Symfony framework. It offers many useful and powerful features such as macros and template inheritance.
-                Melody limits the expressiveness provided by Twig in order to generate highly efficient DOM instructions. As a general rule of thumb, you should write valid HTML templates which contains Twig expressions.
-                See the Twig section for further information.
-            </p>
-
-            <h2>Exporting an element to a Component</h2>
-            <p>
-                Often, it will be useful to export an element so that a component can gain access to it.
-                In Melody, this can be done through the ref attribute:
-            </p>
-
-            <pre>
-                <code>
-                    &lt;button ref="reviewTrigger">Reviews &lt; /button>
-                </code>
-            </pre>
-
-            <p>This will make the element available within the component.</p>
+            {{ content | raw }}
         </article>
     </main>
 </div>

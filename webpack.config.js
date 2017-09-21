@@ -15,9 +15,28 @@ module.exports = {
     },
     module: {
         rules: [
-            {test: /\.js$/, use: 'babel-loader'},
+            {
+                test: /\.js$/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        plugins: [require('babel-plugin-transform-object-rest-spread')]
+                    }
+                }
+            },
             {test: /\.scss$/, use: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])},
-            {test: /\.twig$/, use: ['babel-loader', 'melody-loader']},
+            {
+                test: /\.twig$/,
+                use: [
+                        'babel-loader', 
+                        {
+                            loader: 'melody-loader',
+                            options: {
+                                plugins: ['idom']
+                            }
+                        }
+                ]
+            },
         ]
     },
     plugins: [
