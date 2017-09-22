@@ -11,21 +11,39 @@ import xml from 'highlight.js/lib/languages/xml';
 const LANGUAGES = { javascript, json, xml };
 Object.keys(LANGUAGES).forEach(key => hljs.registerLanguage(key, LANGUAGES[key]));
 
+const contentCache = {};
+
+const updateInCache = (chapter, article, content) => {
+	if(!contentCache[chapter]) {
+		contentCache[chapter] = {};
+	}
+	contentCache[chapter][article] = content;
+	return content;
+};
+
+const getFromCache = (chapter, article) =>
+	contentCache[chapter] && contentCache[chapter][article];
+
 const getContent = (chapter, article) => {
 	const path = `/docs/${chapter}/${article}.md`;
+	const fromCache = getFromCache(chapter, article);
+
+	if (fromCache) {
+		return Promise.resolve(fromCache);
+	}
+
 	return fetch(path)
 		.then(res => res.text())
-    .then(md => snarkdown(md))
-    .catch(err => {
-			console.warn(err);
-			return err;
-		});
+		.then(md => snarkdown(md))
+		.then(content => updateInCache(chapter, article, content))
+		.catch(err => console.warn(err));
 };
 
 const contentOnMount = lifecycle({
 	componentDidMount() {
 		const { params } = this.getState();
 		const [ chapter, article ] = params;
+		this.dispatch({ type: 'SET_LOADING' });
 		getContent(chapter || 'quickstart', article || 'intro')
 			.then(content => {
 				this.dispatch({ type: 'SET_CONTENT', payload: content });
@@ -45,6 +63,11 @@ const stateReducer = (state = {content: 'Loading...'}, { type, payload }) => {
 				...state,
 				changeRoute: payload.changeRoute,
 				params: payload.params,
+			};
+		case 'SET_LOADING':
+			return {
+				...state,
+				content: 'Loading...'
 			};
 		case 'SET_CONTENT':
 			return {
