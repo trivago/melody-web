@@ -59,7 +59,7 @@ const mountCanvas = lifecycle({
     }
 });
 
-const enhance = compose(refs, events, mountCanvas);
+const enhance = compose(events, mountCanvas);
 
 export default enhance(createComponent(template, stateReducer));
 

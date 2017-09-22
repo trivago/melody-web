@@ -65,17 +65,26 @@
         </article>
     </section>
     <div class="bg--purple differences__wrapper">
-        <section class="differences">
-            <h2 class="heading heading--secondary">Melody is different</h2>
-            <ul class="differences__list">
-                <li>Smaller</li>
-                <li class="active">Flexible</li>
-                <li>Efficient</li>
-                <li>Functional</li>
-                <li>Specific</li>
-            </ul>
-            <p class="differences__explanation">Melody uses templates to keep a clear separation of concerns, these templates are compiled to a set of DOM instructions defining the structure of a UI. Other template languages besides Twig can be implemented.</p>
-        </section>
+        {% mount '../../components/tabs/index' with {
+            tabs: [
+                {
+                    name: 'Smaller',
+                    content: 'Melody is smaller (x kb) than most other popular frameworks and libraries: React (40kb), Vue (18kb), Angular 2 (120kb), Glimmer (38kb).',
+                },
+                {
+                    name: 'Flexible',
+                    content: 'Melody uses Twig templates as a view layer, which are compiled to a set of DOM instructions defining the structure of a UI. Although other template languages can be implemented .',
+                },
+                {
+                    name: 'Efficient',
+                    content: 'Melody is among the fastest UI libraries out there, with performant and adaptive rendering out-the-box, it prioritizes and performs only necessary DOM updates (similar to React Fiber).',
+                },
+                {
+                    name: 'Functional',
+                    content: 'Melody provides an API (or set of functions) to enhance your views with state, events or lifecycle methods in a more functional manner.',
+                }
+            ]
+        } %}
     </div>
     {% mount '../../components/melody-in-action/index' %}
     <div class="bg--purple hero__wrapper--small">
