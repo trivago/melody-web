@@ -1,0 +1,499 @@
+@keyframes smallBar1 {
+  0% {
+    transform: translateY(-12px) rotateX(90deg);
+    fill:#1b1464;
+  }
+  100% {
+    transform:  rotateX(0deg) translateY(0px);
+    fill:#1b1464;
+  }
+}
+@keyframes smallBar2 {
+  0% {
+    transform: translateY(-12px) rotateX(90deg);
+    fill:#424284;
+  }
+  100% {
+    transform:  rotateX(0deg) translateY(0px);
+    fill:#424284;
+  }
+}
+@keyframes smallBar3 {
+  0% {
+    transform: translateY(-12px) rotateX(90deg);
+    fill:#5bc6ab;
+  }
+  100% {
+    transform:  rotateX(0deg) translateY(0px);
+    fill:#5bc6ab;
+  }
+}
+
+@keyframes smallBalls {
+  0% {
+    transform:translateY(0px);
+  }
+  50% {
+    transform:translateY(58px);
+  }
+  100% {
+    transform:translateY(58px);
+  }
+}
+
+#small:hover #smallBar1 {
+  transition: transform 1s;
+  transform-origin: bottom center;
+  animation: smallBar1 .7s .25s forwards ;
+  transition-timing-function: ease-in-out;
+}
+#small:hover #smallBar2 {
+  transition: transform 1s;
+  transform-origin: bottom center;
+  animation: smallBar2 .5s .2s forwards ;
+  transition-timing-function: ease-in-out;
+}
+#small:hover #smallBar3 {
+  transition: transform 1s;
+  transform-origin: bottom center;
+  animation: smallBar3 .3s .25s forwards ;
+  transition-timing-function: ease-in-out;
+}
+#small:hover .smallBalls{
+  transition: transform 1s;
+  transform-origin: bottom center;
+  animation: smallBalls .5s  forwards ;
+  transition-timing-function: ease-in;
+}
+
+
+/*STRUCTURED*/
+
+@keyframes structuredBall1 {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(10px) translateY(-20px);
+  }
+}
+@keyframes structuredBall2 {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(20px) translateY(50px);
+  }
+}
+@keyframes structuredBall3 {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(100px) translateY(-25px);
+  }
+}
+@keyframes structuredBar1 {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(20px) rotate(45deg);
+  }
+}
+@keyframes structuredBar2 {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-50px) translateY(-20px) rotate(45deg);
+  }
+}
+@keyframes structuredBar3 {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-10px) translateY(-5px) rotate(-45deg);
+  }
+}
+#structured:hover #structuredBall1 {
+  transition: transform 1s;
+  transform-origin: center;
+  animation: structuredBall1 .5s  forwards ;
+  transition-timing-function: ease-in-out;
+}
+#structured:hover #structuredBall2 {
+  transition: transform 1s;
+  transform-origin: center;
+  animation: structuredBall2 .5s  forwards ;
+  transition-timing-function: ease-in-out;
+}
+#structured:hover #structuredBall3 {
+  transition: transform 1s;
+  transform-origin: center;
+  animation: structuredBall3 .5s  forwards ;
+  transition-timing-function: ease-in-out;
+}
+#structured:hover #structuredBar1 {
+  transition: transform 1s;
+  transform-origin: center;
+  animation: structuredBar1 .5s  forwards ;
+  transition-timing-function: ease-in-out;
+}
+#structured:hover #structuredBar2 {
+  transition: transform 1s;
+  transform-origin: center;
+  animation: structuredBar2 .5s  forwards ;
+  transition-timing-function: ease-in-out;
+}
+#structured:hover #structuredBar3 {
+  transition: transform 1s;
+  transform-origin: center;
+  animation: structuredBar3 .5s  forwards ;
+  transition-timing-function: ease-in-out;
+}
+
+
+
+
+/*FLEXIBLE*/
+@keyframes flexibleDissapear {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    opacity:0;
+  }
+}
+@keyframes flexibleLeftBar{
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(64px) rotate(45deg) ;
+    border-radius: 50%;
+  }
+}
+@keyframes flexibleRightBar{
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-64px) rotate(-45deg);
+  }
+}
+@keyframes flexibleTopRightBall{
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-64px);
+  }
+}
+@keyframes flexibleTopLeftBall{
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateY(64px);
+  }
+}
+@keyframes flexibleBottomLeftBall{
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(64px);
+  }
+}
+@keyframes flexibleBottomRightBall{
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateY(-64px);
+  }
+}
+
+#flexible:hover .flexibleDissapear {
+  transition: transform 1s;
+  transform-origin: center;
+  animation: flexibleDissapear .3s  forwards ;
+  transition-timing-function: ease-in-out;
+}
+#flexible:hover #flexibleLeftBar {
+  transition: transform 1s;
+  transform-origin: center;
+  animation: flexibleLeftBar .3s  forwards ;
+  transition-timing-function: ease-in-out;
+}
+#flexible:hover #flexibleRightBar {
+  transition: transform 1s;
+  transform-origin: center;
+  animation: flexibleRightBar .5s  forwards ;
+  transition-timing-function: ease-in-out;
+}
+#flexible:hover #flexibleTopRightBall {
+  transition: transform 1s;
+  transform-origin: center;
+  animation: flexibleTopRightBall .7s forwards ;
+  transition-timing-function: ease-in-out;
+}
+#flexible:hover #flexibleTopLeftBall {
+  transition: transform 1s;
+  transform-origin: center;
+  animation: flexibleTopLeftBall .4s forwards ;
+  transition-timing-function: ease-in-out;
+}
+#flexible:hover #flexibleBottomRightBall {
+  transition: transform 1s;
+  transform-origin: center;
+  animation: flexibleBottomRightBall .4s forwards ;
+  transition-timing-function: ease-in-out;
+}
+#flexible:hover #flexibleBottomLeftBall {
+  transition: transform 1s;
+  transform-origin: center;
+  animation: flexibleBottomLeftBall .8s forwards ;
+  transition-timing-function: ease-in-out;
+}
+
+/*ERROR*/
+@keyframes errorExclamation {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-40px);
+  }
+  100% {
+    transform: translateX(-40px);
+  }
+}
+
+@keyframes errorLine1 {
+  0% {
+    transform: translateX(-40px);
+  }
+  100% {
+    fill:#1b1464;
+    transform: translateX(0px);
+  }
+}
+@keyframes errorLine2 {
+  0% {
+    transform: translateX(-40px);
+  }
+  100% {
+    fill:#424284;
+    transform: translateX(0px);
+  }
+}
+@keyframes errorLine3 {
+  0% {
+    transform: translateX(-40px);
+  }
+  100% {
+    fill:#1b1464;
+    transform: translateX(0px);
+  }
+}
+#error:hover #errorLine1 {
+  transition: transform 1s;
+  transform-origin: center;
+  animation: errorLine1 .3s .2s forwards ;
+  transition-timing-function: ease-in-out;
+}
+#error:hover #errorLine2 {
+  transition: transform 1s;
+  transform-origin: center;
+  animation: errorLine2 .3s .4s forwards ;
+  transition-timing-function: ease-in-out;
+}
+#error:hover #errorLine3 {
+  transition: transform 1s;
+  transform-origin: center;
+  animation: errorLine3 .3s .6s forwards ;
+  transition-timing-function: ease-in-out;
+}
+#error:hover #errorExclamation {
+  transition: transform 1s;
+  transform-origin: center;
+  animation: errorExclamation 1s  forwards ;
+  transition-timing-function: ease-in-out;
+}
+
+
+
+
+
+/*SPEED*/
+
+@keyframes speedBar{
+  0% {
+    transform: rotateZ(0deg);
+  }
+  40% {
+    transform:  rotateZ(170deg) ;
+  }
+  60% {
+    transform:   rotateZ(150deg) ;
+  }
+  70% {
+    transform:  rotateZ(165deg) ;
+  }
+  80% {
+    transform:  rotateZ(170deg) ;
+  }
+  100% {
+    transform:  rotateZ(170deg) ;
+  }
+}
+
+#speed:hover #speedBar {
+  transition: transform 1s;
+  transform-origin: 87% center;
+  animation: speedBar 1s  forwards ;
+  transition-timing-function: ease-in-out;
+}
+
+
+
+
+
+
+/*BATTLE TESTED*/
+
+@keyframes towerBalls1 {
+  0% {
+    transform: translateX(0px);
+  }
+  25%{
+  	transform: translateX(10px);
+  }
+  50%{
+  	transform: translateX(-10px);
+  }
+  75%{
+  	transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes towerBalls2 {
+  0% {
+    transform: translateX(0px);
+  }
+  25%{
+  	transform: translateX(15px);
+  }
+  50%{
+  	transform: translateX(-15px);
+  }
+  75%{
+  	transform: translateX(15px);
+  }
+  100% {
+    transform: translateX(-5px);
+  }
+}
+@keyframes towerBalls3 {
+  0% {
+    transform: translateX(0px);
+  }
+  25%{
+  	transform: translateX(13px);
+  }
+  50%{
+  	transform: translateX(-13px);
+  }
+  75%{
+  	transform: translateX(13px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes towerBalls4 {
+  0% {
+    transform: translateX(0px);
+  }
+  25%{
+  	transform: translateX(15px);
+  }
+  50%{
+  	transform: translateX(-15px);
+  }
+  75%{
+  	transform: translateX(15px);
+  }
+  100% {
+    transform: translateX(5px);
+  }
+}
+@keyframes towerBalls5 {
+  0% {
+    transform: translateX(0px);
+  }
+  25%{
+  	transform: translateX(18px);
+  }
+  50%{
+  	transform: translateX(-18px);
+  }
+  75%{
+  	transform: translateX(18px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes earthquake {
+  0% {
+    transform: translateX(0px);
+  }
+  25%{
+  	transform: translateX(15px);
+  }
+  50%{
+  	transform: translateX(-15px);
+  }
+  75%{
+  	transform: translateX(15px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+#battleTested:hover #towerBalls1 {
+  transition: transform 1s;
+  transform-origin: center center;
+  animation: towerBalls1 1s .01s forwards ;
+}
+#battleTested:hover #towerBalls2 {
+  transition: transform 1s;
+  transform-origin: center center;
+  animation: towerBalls2 1s .02s forwards ;
+}
+#battleTested:hover #towerBalls3 {
+  transition: transform 1s;
+  transform-origin: center center;
+  animation: towerBalls3 1s .03s forwards ;
+}
+#battleTested:hover #towerBalls4 {
+  transition: transform 1s;
+  transform-origin: center center;
+  animation: towerBalls4 1s .04s forwards ;
+}
+#battleTested:hover #towerBalls5 {
+  transition: transform 1s;
+  transform-origin: center center;
+  animation: towerBalls5 1s .05s forwards ;
+}
+#battleTested:hover .ground {
+  transition: transform 1s;
+  transform-origin: center center;
+  animation: earthquake 1s  forwards ;
+}
