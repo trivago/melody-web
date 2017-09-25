@@ -1654,6 +1654,10 @@ dns-txt@^2.0.2:
   dependencies:
     buffer-indexof "^1.0.0"
 
+dom-classlist@^1.0.1:
+  version "1.0.1"
+  resolved "http://npm.pkg.trivago.trv:8080/d/dom-classlist/_attachments/dom-classlist-1.0.1.tgz#722814dc2f509d3d7d06f2533ba9ff48eeea59b9"
+
 domain-browser@^1.1.1:
   version "1.1.7"
   resolved "http://npm.pkg.trivago.trv:8080/d/domain-browser/_attachments/domain-browser-1.1.7.tgz#867aa4b093faa05f1de08c06f4d7b21fdf8698bc"
@@ -4356,6 +4360,12 @@ which@1, which@^1.2.9:
   resolved "http://npm.pkg.trivago.trv:8080/w/which/_attachments/which-1.2.14.tgz#9a87c4378f03e827cecaf1acdf56c736c01c14e5"
   dependencies:
     isexe "^2.0.0"
+
+wicg-focus-ring@^2.0.1:
+  version "2.0.1"
+  resolved "http://npm.pkg.trivago.trv:8080/w/wicg-focus-ring/_attachments/wicg-focus-ring-2.0.1.tgz#d193681fdb315445d3744bd96f8a9636db13aa3d"
+  dependencies:
+    dom-classlist "^1.0.1"
 
 wide-align@^1.1.0:
   version "1.1.2"

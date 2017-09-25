@@ -1,3 +1,7 @@
+.js-focus-ring :focus:not(.focus-ring) {
+    outline-width: 0;
+}
+
 .main-wrapper {
     @include respond-to-min($desktop) {
         position: relative;
@@ -156,6 +160,7 @@
     }
 
     &__image svg {
+        cursor: pointer;
         width: 150px;
         height: 150px;
 
@@ -260,12 +265,13 @@
 
     @include respond-to-min($tablet-large) {
         grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: auto 1fr 0;
+        grid-template-rows: auto auto auto;
     }
 
     .heading {
         @include respond-to-min($tablet-large) {
             grid-column: 1 / 7;
+            grid-row: 1;
         }
     }
 
@@ -273,9 +279,11 @@
         position: relative;
         height: auto;
         background-color: $dark-blue;
+        overflow: scroll;
 
         @include respond-to-min($tablet-large) {
             grid-column: 1 / 5;
+            grid-row: 2;
         }
 
         .filename {
@@ -284,7 +292,7 @@
             top: 0;
             padding: 3px 7px;
             margin: 0;
-            color: #fff;
+            color: $white;
             border: none;
             background: #666;
             border-radius: 0 0 0 3px;
@@ -296,46 +304,45 @@
             padding: 1em;
             margin: 0;
             overflow: scroll;
-            color: #fff;
+            color: $white;
         }
 
         &--large {
             @include respond-to-min($tablet-large) {
                 grid-column: 1 / 7;
-            }
-        }
-
-        &--demo {
-            background-color: transparent;
-            border: 1px solid $purple;
-            padding: 20px;
-
-            @include respond-to-min($tablet-large) {
-                grid-column: 5 / 7;
-                grid-row: 2 / 4;
-            }
-
-            input {
-                margin-right: 5px;
-                padding: 5px;
-                border: 1px solid $purple;
-                border-radius: 3px;
-            }
-
-            button {
-                padding: 5px;
-                border: 1px solid $purple;
-                border-radius: 3px;
-                background: $purple;
-                color: #fff;
-            }
-
-            li {
-                padding: 3px 0;
+                grid-row: 3;
             }
         }
     }
 }
 
+.demo {
+    background-color: transparent;
+    border: 1px solid $purple;
+    padding: 20px;
+
+    @include respond-to-min($tablet-large) {
+        grid-column: 5 / 7;
+        grid-row: 2;
+    }
+
+    li {
+        margin: 8px 0;
+    }
+
+    &__inputs {
+        display: flex;
+        flex-wrap: wrap;
+
+        @include respond-to-min($tablet-large) {
+            justify-content: space-around;
+        }
+
+        .btn,
+        .input {
+            margin: 6px 0 0 6px;
+        }
+    }
+}
 
 

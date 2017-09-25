@@ -5,6 +5,7 @@
     font-weight: bold;
     display: flex;
     flex-wrap: wrap;
+    cursor: pointer;
 
     &--primary {
         background-color: $green;
@@ -20,6 +21,18 @@
         margin-left: 24px;
     }
 }
+
+.input {
+    display: inline-block;
+    width: auto;
+    padding: 0 12px;
+    text-align: left;
+    font-size: 14px;
+    height: 32px;
+    border: 1px solid $purple;
+    color: $juri;
+}
+
 .highlight {
     color: $green;
 }
