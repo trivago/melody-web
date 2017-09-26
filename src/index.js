@@ -3,7 +3,7 @@ import { initDevTools } from 'melody-devtools';
 
 import MelodyRouter from './components/router';
 import 'wicg-focus-ring';
-// import './components/serviceworker';
+import './components/serviceworker';
 import './base.scss';
 
 import Home from './pages/home';
