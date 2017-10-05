@@ -117,7 +117,6 @@ const enhance = mapProps(props => ({
 export default enhance(MyComponent);
 ```
 
-
 ### `defaultProps`
 
 Specifies props to be passed by default to the component. If props are present, default props will be overridden.
@@ -143,7 +142,6 @@ const enhance = defaultProps({ title: 'No title specified' });
 export default enhance(MyComponent);
 ```
 
-
 ### `withProps`
 
 Specifies props to be passed by default to the component. If props are present, they will be overridden.
@@ -168,6 +166,142 @@ const enhance = withProps({ pi: Math.PI });
 
 export default enhance(MyComponent);
 ```
+
+### `withRefs`
+
+Specifies functions to be executed when **referenced elements** are added to the DOM, giving access to the DOM Element. Used by `bindEvents` under the hood.
+
+### Signature
+```
+withRefs(
+    (component: Component) => ({
+        [refName: string]: (element: DOMNode) => Function
+    })
+): (Component) => Component
+```
+* `functionMap` object lets you define a set of functions for `ref`s elements that you referenced within the template.
+* These functions receive the elements DOM node as an argument and have to return an object with a `unsubscribe` function for when the node is removed from the DOM.
+* **returns a function** that expects a Melody component and returns a enhanced version of the component.
+
+### Example
+```javascript
+import { withRefs } from 'melody-hoc';
+import { createComponent } from 'melody-component';
+import template from './template.twig';
+
+const MyComponent = createComponent(template);
+
+let sectionElement;
+const enhance = withRefs(component => ({
+    section: el => {
+        sectionElement = el;
+        return {
+            unsubscribe() {
+                sectionElement = el;
+            }
+        };
+    }
+});
+
+export default enhance(MyComponent);
+```
+```html
+<div>
+    <section ref="{{ section }}">
+        <p>Hello</p>
+    </section>
+</div>
+```
+
+### `withStore`
+
+Specifies a redux store and passes two additional props to the base component: a state value, and a function to dispatch actions.
+You'll likely want to use this state updater along with `withHandlers` to create specific updater functions.
+When props are given the the component the `RECEIVE_PROPS` action will be called with the props as its `payload`.
+
+### Signature
+```
+withStore(
+    storeFactory : Function => store : ReduxStore,
+    stateName = 'state' : string,
+    dispatchName = 'dispatch' : string,
+) : (Component) => Component
+```
+* `storeFactory` is a function that returns a redux store.
+* `stateName` and `dispatchName` can be renamed and are given as props to the base component.
+* **returns a function** that expects a Melody component and returns a enhanced version of the component.
+
+### Example
+```javascript
+import { withStore } from 'melody-hoc';
+import { createComponent } from 'melody-component';
+import { createStore } from 'redux';
+import template from './template.twig';
+
+const MyComponent = createComponent(template);
+
+const reducer = (state, action) =>
+    action.type === 'INC' ? state + 1 : state;
+
+const enhance = compose(
+    withStore(() => createStore(reducer, 0)),
+    withHandlers({
+        onClick: props => event => {
+            console.log('state', props.state);
+            props.dispatch({type: 'INC'});
+        }
+    })
+);
+
+export default enhance(MyComponent);
+```
+```html
+<div>
+    <div>{{ state }}</div>
+    <button onclick="{{ onClick }}">Increment</button>
+</nav>
+```
+
+### `withHandlers`
+
+Takes an object map of handler creators. These are higher-order functions that accept a set of props and return a function handler:
+This allows the handler to access the current props via closure, without needing to change its signature.
+
+### Signature
+```
+withHandlers(
+  handlerCreators: {
+    [handlerName: string]: (props: Object) => Function
+  }
+) : (Component) => Component
+```
+* `handlersCreators` object lets you define a set of functions for `ref`s elements that you referenced within the template.
+* These functions receive the elements DOM node as an argument and have to return an object with a `unsubscribe` function for when the node is removed from the DOM.
+* **returns a function** that expects a Melody component and returns a enhanced version of the component.
+
+### Example
+```javascript
+import { withHandlers } from 'melody-hoc';
+import { createComponent } from 'melody-component';
+import template from './template.twig';
+
+const MyComponent = createComponent(template);
+
+const enhance = withHandlers({
+    onClick: props => event => {
+        console.log('Clicked', event.target);
+    }
+});
+
+export default enhance(MyComponent);
+```
+```html
+<nav>
+    <a onclick="{{ onClick }}">Home</a>
+    <a onclick="{{ onClick }}">News</a>
+</nav>
+```
+
 
 ### Utility functions
 
