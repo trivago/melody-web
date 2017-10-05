@@ -1,20 +1,20 @@
-import toolbox from 'sw-toolbox';
+importScripts('workbox-sw.js');
 
-const bypassSW = true;
-const DEBUG = false;
+var workboxSW = new WorkboxSW({ clientsClaim: true, skipWaiting: true });
 
-if(!bypassSW) {
-    if(!DEBUG) {
-        toolbox.options.debug = true;
-    }
+workboxSW.precache([]);
 
-    toolbox.precache([
-        '/',
-        '/sw.js',
-        'main.js',
-        'main.css',
-        'manifest.json'
-    ]);
+workboxSW.router.registerRoute(
+    '/',
+    workboxSW.strategies.staleWhileRevalidate()
+);
 
-    toolbox.router.get('/(.*)', toolbox.fastest);
-}
+workboxSW.router.registerRoute('https://fonts.googleapis.com/(.*)',
+    workboxSW.strategies.cacheFirst({
+        cacheName: 'googleapis',
+        cacheExpiration: {
+            maxEntries: 1
+        },
+        cacheableResponse: {statuses: [0, 200]}
+    })
+);

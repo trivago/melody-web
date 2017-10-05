@@ -3,6 +3,8 @@ var path = require('path');
 var BabiliPlugin = require('babili-webpack-plugin');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
+var WorkboxBuildWebpackPlugin = require('workbox-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -45,7 +47,17 @@ module.exports = {
         // }),
         // new LodashModuleReplacementPlugin(),
         // new BabiliPlugin({}, {comments: false}),
-        new ExtractTextPlugin('main.css')
+        new ExtractTextPlugin('main.css'),
+        new CopyWebpackPlugin([
+            { from: require.resolve('workbox-sw'), to: 'workbox-sw.js' }
+        ]),
+        new WorkboxBuildWebpackPlugin({
+            globDirectory: './public',
+            globPatterns: ['**/*.{html,js,css,svg,md,png,json,ico}'],
+            globIgnores: ['sw.js','workbox-sw.js'],
+            swSrc: path.join(__dirname, 'src', 'components', 'serviceworker', 'sw.js'),
+            swDest: path.join(__dirname, 'public', 'sw.js'),
+        })
     ],
     devServer: {
       contentBase: path.join(__dirname, 'public'),
