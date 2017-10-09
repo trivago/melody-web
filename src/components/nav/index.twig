@@ -1,52 +1,53 @@
 <header class="header">
-  <nav class="nav{{isHome and not isFixed ? ' nav--inverse' }}{{isFixed ? ' nav--fixed' }}">
-      <a class="nav__logo" ref="{{homepageLink}}">
-          {% include '../../style/icons/icn-logo_header.html.twig' %}
-      </a>
-      <div class="nav__items">
-          <span class="nav__menu" ref="{{toggleMenu}}">
+    <nav class="nav{{isHome and not isFixed ? ' nav--inverse' }}{{isFixed ? ' nav--fixed' }}">
+        <a class="nav__logo" ref="{{homepageLink}}">
+            {% include '../../style/icons/icn-logo_header.html.twig' %}
+        </a>
+        <div class="nav__items">
+            <span class="nav__menu" ref="{{toggleMenu}}">
             {% if menuOpen %}
-              {% include '../../style/icons/icn-close.html.twig' %}
+                {% include '../../style/icons/icn-close.html.twig' %}
             {% else %}
-              {% include '../../style/icons/icn-hamburger.html.twig' %}
+                {% include '../../style/icons/icn-hamburger.html.twig' %}
             {% endif %}
-          </span>
-          <a class="nav__item" href="/documentation" ref="{{documentationLink}}">Documentation</a>
-      </div>
-  </nav>
-  {% if hasSideMenu %}
-  <aside class="side-menu{{menuOpen ? ' side-menu--open'}}{{menuHidden ? ' hidden'}}" ref="{{ sideMenu }}">
-      <div class="side-menu__wrapper" ref="{{ menuLinks }}">
-          <h3>Quickstart</h3>
-          <ul>
-              <li><a href="/documentation/quickstart/intro">Intro</a></li>
-              <li><a href="/documentation/quickstart/getting-started">Getting Started</a></li>
-              <li><a href="/documentation/quickstart/twig">Templates</a></li>
-              <li><a href="/documentation/quickstart/rendering">Rendering</a></li>
-              <li><a href="/documentation/quickstart/state-lifecycle">State and Lifecycle</a></li>
-              <li><a href="/documentation/quickstart/events">Events</a></li>
-              <li><a href="/documentation/quickstart/forms">Forms</a></li>
-          </ul>
+            </span>
+            <a class="nav__item" href="/documentation" ref="{{documentationLink}}">Documentation</a>
+        </div>
+    </nav>
+    {% if hasSideMenu %}
+    <aside class="side-menu{{menuOpen ? ' side-menu--open'}}{{menuHidden ? ' hidden'}}" ref="{{ sideMenu }}">
+        <div class="side-menu__wrapper" ref="{{ menuLinks }}">
+            <h3>Quickstart</h3>
+            <ul>
+                <li><a href="/documentation/quickstart/intro">Intro</a></li>
+                <li><a href="/documentation/quickstart/getting-started">Getting Started</a></li>
+                <li><a href="/documentation/quickstart/twig">Templates</a></li>
+                <li><a href="/documentation/quickstart/rendering">Rendering</a></li>
+                <li><a href="/documentation/quickstart/state-lifecycle">State and Lifecycle</a></li>
+                <li><a href="/documentation/quickstart/events">Events</a></li>
+                <li><a href="/documentation/quickstart/forms">Forms</a></li>
+            </ul>
 
-          <h3>Advanced</h3>
-          <ul>
-              <li><a href="/documentation/advanced/actions">Actions</a></li>
-              <li><a href="/documentation/advanced/reducers">Reducers</a></li>
-              <li><a href="/documentation/advanced/passing-actions">Passing Actions Down</a></li>
-              <li><a href="/documentation/advanced/hoc">High Order Components</a></li>
-              <li><a href="/documentation/advanced/lifecycle">Component Lifecycle</a></li>
-              <li><a href="/documentation/advanced/middleware">Middleware</a></li>
-          </ul>
+            <h3>Advanced</h3>
+            <ul>
+                <li><a href="/documentation/advanced/actions">Actions</a></li>
+                <li><a href="/documentation/advanced/reducers">Reducers</a></li>
+                <li><a href="/documentation/advanced/passing-actions">Passing Actions Down</a></li>
+                <li><a href="/documentation/advanced/hoc">High Order Components</a></li>
+                <li><a href="/documentation/advanced/lifecycle">Component Lifecycle</a></li>
+                <li><a href="/documentation/advanced/middleware">Middleware</a></li>
+                <li><a href="/documentation/advanced/jsx">Melody in Preact/Inferno</a></li>
+            </ul>
 
-          <h3>Redux</h3>
-          <ul>
-              <li><a href="/documentation/redux/intro">Intro</a></li>
-              <li><a href="/documentation/redux/connect">Connect</a></li>
-              <li><a href="/documentation/redux/provide">Provide</a></li>
-              <li><a href="/documentation/redux/redux-thunk">Thunks</a></li>
-              <li><a href="/documentation/redux/redux-saga">Sagas</a></li>
-          </ul>
-      </div>
-  </aside>
-  {% endif %}
+            <h3>Redux Integration</h3>
+            <ul>
+                <li><a href="/documentation/redux/intro">Intro</a></li>
+                <li><a href="/documentation/redux/connect">Connect</a></li>
+                <li><a href="/documentation/redux/provide">Provide</a></li>
+                <li><a href="/documentation/redux/redux-thunk">Thunks</a></li>
+                <li><a href="/documentation/redux/redux-saga">Sagas</a></li>
+            </ul>
+        </div>
+    </aside>
+    {% endif %}
 </header>
