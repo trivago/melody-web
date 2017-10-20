@@ -96,10 +96,6 @@ workboxSW.precache([
     "revision": "61c223d0ab3fb8129fcd8d0f50af62af"
   },
   {
-    "url": "docs/SUMMARY.md",
-    "revision": "4ab972e3ade4ee0874a8b9d382cd843f"
-  },
-  {
     "url": "docs/test/intro.md",
     "revision": "424b85bbe0d4eb654baab920a11bd94b"
   },
