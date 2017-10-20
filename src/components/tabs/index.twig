@@ -2,7 +2,7 @@
     <h2 class="heading heading--secondary">Melody is different</h2>
     <ul class="differences__list">
         {% for tab in tabs %}
-          <li key="{{ tab.name }}" onclick="{{ onClick }}" class="{{ activeTab.name == tab.name ? 'active' }}" tabindex="0">{{ tab.name }}</li>
+          <li key="{{ tab.name }}" ref="{{ tabRef }}" class="{{ activeTab.name == tab.name ? 'active' }}" tabindex="0">{{ tab.name }}</li>
         {% endfor %}
     </ul>
     <p class="differences__explanation">

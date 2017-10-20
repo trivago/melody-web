@@ -9,15 +9,19 @@ workboxSW.precache([
   },
   {
     "url": "docs/advanced/actions.md",
-    "revision": "60edb668e0b4bdc35b4953f7b61293a2"
+    "revision": "3b6371955864374038e88b689185830b"
   },
   {
     "url": "docs/advanced/hoc.md",
-    "revision": "9db205509aad66c304ecab0b0301e410"
+    "revision": "50cc4f74941fd1194514f8bcfc72f676"
   },
   {
     "url": "docs/advanced/intro.md",
     "revision": "04f4d23ebddc5ab4d574752cc5fa7534"
+  },
+  {
+    "url": "docs/advanced/jsx.md",
+    "revision": "738185cc3d05a5b136f2a6b11aa17f8e"
   },
   {
     "url": "docs/advanced/lifecycle.md",
@@ -25,7 +29,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/advanced/middleware.md",
-    "revision": "6312976c2274dde07c3ddc7b9905f117"
+    "revision": "274e721ccc85d524ed86ddf6bac974e5"
   },
   {
     "url": "docs/advanced/mixins.md",
@@ -33,31 +37,19 @@ workboxSW.precache([
   },
   {
     "url": "docs/advanced/passing-actions.md",
-    "revision": "dcc193fb0c5ca5dbb5cc8f7a74a36e89"
+    "revision": "d4afb527fb076a18b44ae4c4fe2df70e"
   },
   {
     "url": "docs/advanced/reducers.md",
     "revision": "1adc8bc8363d0248aaadcaeccdd43745"
   },
   {
-    "url": "docs/best_practices/data.md",
-    "revision": "efe0c55de1fc5ba0b54c144bff61ba63"
-  },
-  {
-    "url": "docs/best_practices/intro.md",
-    "revision": "d41d8cd98f00b204e9800998ecf8427e"
-  },
-  {
     "url": "docs/components/intro.md",
     "revision": "c427c2b55a4f75ed5d228eac7227591b"
   },
   {
-    "url": "docs/harmony/intro.md",
-    "revision": "5c1626ac23ce537552a587f194f58636"
-  },
-  {
     "url": "docs/quickstart/events.md",
-    "revision": "72c719b5d1781b932251e617d33fa1bf"
+    "revision": "7a9670d76c8db32b28848e5e834bf373"
   },
   {
     "url": "docs/quickstart/getting-started.md",
@@ -69,7 +61,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/quickstart/rendering.md",
-    "revision": "17adb9dc6abda4337a1457d385850101"
+    "revision": "1162de8807390bc821ab6d6310082a69"
   },
   {
     "url": "docs/quickstart/state-lifecycle.md",
