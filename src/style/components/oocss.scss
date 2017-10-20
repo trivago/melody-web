@@ -1,3 +1,10 @@
+a {
+    color: $green;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
 .btn {
     font-family: 'Quicksand', Arial, sans-serif;
     border-radius: 2px;
@@ -12,6 +19,10 @@
         color: $purple;
         border: 0;
         padding: 8px 12px;
+
+        &:hover {
+            background-color: $dark-green;
+        }
     }
     &--secondary {
         padding: 14px 12px;
@@ -19,6 +30,11 @@
         color: $green;
         border: 1px solid $green;
         margin-left: 24px;
+
+        &:hover {
+            background-color: $green;
+            color: $purple;
+        }
     }
 }
 
@@ -35,17 +51,17 @@
 
 .highlight {
     color: $green;
+    text-decoration: underline;
 }
 
 .heading {
     font-size: 24px;
-    line-height: 30px;
+    line-height: 1.25;
     width: 100%;
     margin: 0;
 
     @include respond-to-min($desktop) {
         font-size: 32px;
-        line-height: 30px;
     }
 }
 
@@ -111,6 +127,14 @@ code, pre.code {
 
         @include respond-to-min($desktop) {
             padding: 48px 0;
+        }
+
+        &-action {
+            padding: 32px;
+
+            @include respond-to-min($desktop) {
+                padding: 48px 32px;
+            }
         }
     }
 }

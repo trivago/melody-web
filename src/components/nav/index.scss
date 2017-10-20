@@ -7,7 +7,7 @@
     width: 100%;
     letter-spacing: 1px;
     z-index: 4;
-    background: $purple;
+    background: $dark-blue;
     border-bottom: 3px solid $green;
     grid-template-columns: auto 1fr;
     align-items: center;
@@ -26,6 +26,10 @@
         grid-column: 1 / 2;
         cursor: pointer;
         margin-left: 32px;
+
+         svg {
+             vertical-align: bottom;
+         }
     }
 
     &__items {
