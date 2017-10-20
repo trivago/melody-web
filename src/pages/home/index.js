@@ -29,7 +29,11 @@ const stateReducer = (state = initialState, {type, payload}) => {
 };
 
 const events = bindEvents({
-    
+    docsLink: {
+        click(event, {props}) {
+            props.changeRoute('/documentation');
+        }
+    }
 });
 
 const mountCanvas = lifecycle({

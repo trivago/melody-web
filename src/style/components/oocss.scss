@@ -19,9 +19,11 @@ a {
         color: $purple;
         border: 0;
         padding: 8px 12px;
+        text-decoration: none;
 
         &:hover {
             background-color: $dark-green;
+            text-decoration: none;
         }
     }
     &--secondary {
@@ -30,10 +32,12 @@ a {
         color: $green;
         border: 1px solid $green;
         margin-left: 24px;
+        text-decoration: none;
 
         &:hover {
             background-color: $green;
             color: $purple;
+            text-decoration: none;
         }
     }
 }

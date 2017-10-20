@@ -46,6 +46,7 @@ export default routes => {
             const url = [path, ...params].join('/');
             window.history.pushState(null, '', url);
             dispatch(changeRoute(path, params));
+            window.scrollTo(0, 0);
         }
     });
 
@@ -75,7 +76,6 @@ export default routes => {
                         this.dispatch(changeRoute(route, params));
                         return;
                     }
-
                 }
             };
 
