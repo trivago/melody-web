@@ -8,11 +8,11 @@ yarn add --dev neutrino neutrino-preset-melody-jsx
 ```
 
 ### Using `melody-loader`  manually
-Open your Preact/Inferno project, run:
+Open your Preact/Inferno project and run:
 ```bash
-yarn add --dev melody-loader babel-plugin-jsx-pragmatic
+yarn add --dev melody-loader
 ```
-Edit your webpack config modules rules for `.twig`
+Edit your webpack config module rules for `.twig` files:
 ```js
 module.exports = {
   entry: { /*...*/ },
@@ -50,13 +50,14 @@ module.exports = {
   }
 };
 ```
-Required babel plugins:
+**Babel plugins:**
 
 Preact:
 - [babel-plugin-transform-react-jsx](https://www.npmjs.com/package/babel-plugin-transform-react-jsx) to transform jsx using `h` pragma for preact
 - [babel-plugin-jsx-pragmatic](https://www.npmjs.com/package/babel-plugin-jsx-pragmatic) to add dynamic imports with correct pragma to twig files.
 Inferno:
 - [babel-plugin-inferno](https://www.npmjs.com/package/babel-plugin-inferno) to transform jsx and import Inferno in twig files with JSX.
+## Code Example
 `melody.twig`
 ```twig
 <h2>Hey from {{name}}</h2>
