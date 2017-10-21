@@ -52,10 +52,10 @@ that should not be a problem but it is something you should keep in mind.
 ### patch: Rendering into an element
 
 If you want to render a template into an element, you'll need to use the `patch` function
-exported through `trv-melody/idom`.
+exported through `melody-idom`.
 
 ```js
-import { patch } from 'trv-melody/idom';
+import { patch } from 'melody-idom';
 import template from './twig/template.twig';
 patch(document.querySelector('#app'), () => {
     const context = {
@@ -75,7 +75,7 @@ where you'll want to offer control over an existing element to a template.
 In those cases, you can use the `patchOuter` method.
 
 ```js
-import { patchOuter } from 'trv-melody/idom';
+import { patchOuter } from 'melody-idom';
 import template from './twig/template.twig';
 patchOuter(document.querySelector('#app'), () => {
     const context = {
@@ -108,7 +108,7 @@ easy as this:
 
 ```js
 // Item.js
-import {createComponent} from 'trv-melody';
+import {createComponent} from 'melody-component';
 import itemTemplate from './Item.twig';
 
 export default createComponent(itemTemplate);
@@ -152,7 +152,7 @@ state.
 
 ```js
 // Item.js
-import {createComponent, RECEIVE_PROPS} from 'trv-melody';
+import {createComponent, RECEIVE_PROPS} from 'melody-component';
 import itemTemplate from './Item.twig';
 
 function stateReducer(state, action) {
@@ -190,7 +190,7 @@ the original component object (a prototype object) and returns an
 object which is then added to the component.
 
 ```js
-import {createComponent, RECEIVE_PROPS} from 'trv-melody';
+import {createComponent, RECEIVE_PROPS} from 'melody-component';
 import itemTemplate from './Item.twig';
 
 function stateReducer(state, action) {

@@ -16,11 +16,11 @@ able to use any other middleware as well.
 ## Applying Middleware
 
 In order to use a Middlewares, you need to import the `applyMiddleware` function
-from `trv-melody/util`.
+from `melody-util`.
 
 ```js
-import {createComponent} from 'trv-melody/component';
-import {applyMiddleware} from 'trv-melody/util';
+import {createComponent} from 'melody-component';
+import {applyMiddleware} from 'melody-util';
 import thunkMiddleware from 'redux-thunk';
 import promiseMiddleware from 'redux-promise';
 import template from './template.twig';

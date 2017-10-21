@@ -6,8 +6,8 @@ inject a specific store into your component hierarchy.
 
 ```js
 import ItemList from '../components/ItemList';
-import {render} from 'trv-melody';
-import {provide} from 'trv-melody/redux';
+import {render} from 'melody-component';
+import {provide} from 'melody-redux';
 import {store} from './store';
 
 const root = document.querySelector('.item-list');
@@ -22,7 +22,7 @@ the store that should be used throughout the rest of the application or module.
 
 In the following screencasts you can find an example of how to pass the store down
 in different ways. The example is using React and `react-redux` but the
-principle can be applied for `provide` of the Melody `trv-melody/redux` as well.
+principle can be applied for `provide` of the Melody `melody-redux` as well.
 
 1. [Redux: Passing the Store Down Explicitly via Props](https://egghead.io/lessons/javascript-redux-passing-the-store-down-explicitly-via-props)
 2. [Redux: Passing the Store Down Implicitly via Context](https://egghead.io/lessons/javascript-redux-passing-the-store-down-implicitly-via-context)
