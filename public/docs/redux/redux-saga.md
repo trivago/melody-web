@@ -85,8 +85,8 @@ To run our Saga, we'll have to connect it to the Redux Store using the
 #### `main.js`
 
 ```js
-import {createComponent} from 'trv-melody';
-import {applyMiddleware} from 'trv-melody/util';
+import {createComponent} from 'melody-component';
+import {applyMiddleware} from 'melody-util';
 import createSagaMiddleware from 'redux-saga';
 
 import template from './template';

@@ -23,7 +23,7 @@ you would prefer to add your event handlers using jQuery and event delegation
 (there is really no need to do it but it is your choice, after all).
 
 ```js
-import {createComponent} from 'trv-melody';
+import {createComponent} from 'melody-component';
 import stateReducer from './reducers';
 import template from './template.twig';
 

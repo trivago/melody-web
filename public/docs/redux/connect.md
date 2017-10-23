@@ -1,7 +1,7 @@
 # Connecting a Component to a Redux Store
 
 In order to connect a Melody Component to a Redux Store that was [provided](./provide.md)
-to it, you'll need to use the `connect` function from `trv-melody/redux`.
+to it, you'll need to use the `connect` function from `melody-redux`.
 
 ## `connect(mapStateToProps?, mapDispatchToProps?, mergeProps?): (Component) => Component`
 
@@ -52,8 +52,8 @@ thus combining all provided values into a single object.
 ## Example
 
 ```js
-import {createComponent} from 'trv-melody';
-import {connect} from 'trv-melody/redux';
+import {createComponent} from 'melody-component';
+import {connect} from 'melody-redux';
 import template from './index.twig';
 import { refresh } from './actions';
 
@@ -84,8 +84,8 @@ export default connect(mapStateToProps, mapDispatchToProps)(ItemList);
 Alternatively, if you prefer less boilerplate, you could also do this:
 
 ```js
-import {createComponent} from 'trv-melody';
-import {connect} from 'trv-melody/redux';
+import {createComponent} from 'melody-component';
+import {connect} from 'melody-redux';
 import template from './index.twig';
 import { refresh } from './actions';
 
@@ -114,7 +114,7 @@ which means they'll also be available for usage within the imported template.
 
 In the following screencasts you can find an example of how to connect a [provided](./provide.md)
 Redux Store. The example is using React and `react-redux` but the principle can
-be applied for the `connect` function of Melody `trv-melody/redux` as well.
+be applied for the `connect` function of Melody `melody-redux` as well.
 
 1. [Redux: Generating Containers with connect() from React Redux (VisibleTodoList)](https://egghead.io/lessons/javascript-redux-generating-containers-with-connect-from-react-redux-visibletodolist)
 2. [Redux: Generating Containers with connect() from React Redux (AddTodo)](https://egghead.io/lessons/javascript-redux-generating-containers-with-connect-from-react-redux-addtodo)
