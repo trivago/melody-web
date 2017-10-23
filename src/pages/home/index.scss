@@ -275,7 +275,7 @@
         position: relative;
         height: auto;
         background-color: $dark-blue;
-        overflow: scroll;
+        overflow: auto;
 
         @include respond-to-min($tablet-large) {
             grid-column: 1 / 5;
@@ -299,7 +299,7 @@
         pre { 
             padding: 1em;
             margin: 0;
-            overflow: scroll;
+            overflow: auto;
             color: $white;
         }
 
