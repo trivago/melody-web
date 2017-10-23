@@ -139,7 +139,7 @@
         padding: 8px;
         background-color: $dark-blue;
         color: $white;
-        overflow: scroll;
+        overflow: auto;
         font-size: 14px;
 
         @include respond-to-min($desktop) {
