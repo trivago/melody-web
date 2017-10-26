@@ -59,14 +59,14 @@ state and the provided *Action*.
 ## Creating a component
 
 In order to create a new Component, you'll just need to import the
-`createComponent` function from `trv-melody` and the template you'd
+`createComponent` function from `melody-component` and the template you'd
 like to create a component for. Assuming that you're using Webpack
 to build your application and have configured the Melody Loader, this
 process will be as easy as this:
 
 ```js
 // Item.js
-import {createComponent} from 'trv-melody';
+import {createComponent} from 'melody-component';
 import itemTemplate from './Item.twig';
 import stateReducer from './reducers';
 import {FancyMixin1, FancyMixin2} from './mixins';
@@ -86,11 +86,11 @@ unnecessary rendering for free.
 ## Rendering a Component
 
 At some point you'll need to actually render your root component.
-`trv-melody` provides a `render` function which will take care of that for you.
+`melody-component` provides a `render` function which will take care of that for you.
 
 ```js
 import MyComponent from '../MyComponent/MyComponent';
-import {render} from 'trv-melody';
+import {render} from 'melody-component';
 
 const root = document.querySelector('.item-list');
 

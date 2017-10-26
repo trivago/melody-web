@@ -56,7 +56,7 @@ You can compose your views using `twig` statements:
   } only %}
 </div>
 ```
-#### Notice that you can pass properties using the twig `with` statement.
+Notice that you can pass properties using the twig `with` statement.
 
 ### **Use `mount` statement to import components**
 You can also use the `mount` statement within your components, using the same syntax as `embed`/`include`, the difference being that the view to be mounted should be a **melody component**.
@@ -119,9 +119,6 @@ render(
 - You can use `loop.index0` twig statement to get current index of element.
 - The `key` attribute should never be filtered through `attrs` filter. The `key` attribute is only used internally by Melody and its value does not even appear in the rendered HTML.
 
-| Previous | Next |
-| ---------| -----------:|
-| [Templates (Twig)](2.twig.md) | [State and Lifecycle](4.state-lifecycle.md) |
 
 
 

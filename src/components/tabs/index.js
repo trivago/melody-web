@@ -1,5 +1,5 @@
 import { createComponent, RECEIVE_PROPS } from 'melody-component';
-import { bindEvents, withHandlers } from 'melody-hoc';
+import { bindEvents } from 'melody-hoc';
 import template from './index.twig';
 
 const initialState = {
@@ -27,13 +27,15 @@ const stateReducer = (state = initialState, {type, payload}) => {
   return state;
 }
 
-const enhance = withHandlers({
-  onClick: ({getState, dispatch}) => event => {
-    const tabName = event.target.innerText;
-    const {tabs} = getState();
-    const tab = tabs.find(t => t.name == tabName);
-    if(tab) {
-      dispatch({type: 'CHANGE_TAB', payload: tab});
+const enhance = bindEvents({
+  tabRef: {
+    click(event, {getState, dispatch}) {
+      const tabName = event.target.innerText;
+      const {tabs} = getState();
+      const tab = tabs.find(t => t.name == tabName);
+      if(tab) {
+        dispatch({type: 'CHANGE_TAB', payload: tab});
+      }
     }
   }
 })

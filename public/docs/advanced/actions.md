@@ -59,7 +59,7 @@ just return the props passed to it as the new state.
 
 You are, however, free to handle property changes in any way you want.
 ```js
-import {RECEIVE_PROPS} from 'trv-melody';
+import {RECEIVE_PROPS} from 'melody-component';
 
 export function propsToState(state, action) {
     if(action.type === RECEIVE_PROPS) {

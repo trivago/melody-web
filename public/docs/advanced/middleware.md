@@ -4,28 +4,23 @@ The concept of dispatching actions in Melody is very simple. `dispatch`
 immediately sends the `action` to the Component and the `state` is
 updated according to the `reducer`.
 
-Sometimes, however, you may need more power or flexibility. This can be
-easily achieved using [Mixins](./mixins.md).
-But while mixins enable this style of usage, wouldn't it be nice if we had
-a nicer API for this purpose?
-
 ## Compatibility with Redux
 
 When implementing the Melody version of `applyMiddleware`, we've taken
 some care to make sure that it works with standard Redux middleware.
 
-We've tested this with [redux-thunk](../redux/redux-thunk.md),
-[redux-saga](../redux/redux-saga.md) and `redux-promise` but you should be
+We've tested this with [redux-thunk](../redux/redux-thunk),
+[redux-saga](../redux/redux-saga) and `redux-promise` but you should be
 able to use any other middleware as well.
 
 ## Applying Middleware
 
 In order to use a Middlewares, you need to import the `applyMiddleware` function
-from `trv-melody/util`.
+from `melody-util`.
 
 ```js
-import {createComponent} from 'trv-melody/component';
-import {applyMiddleware} from 'trv-melody/util';
+import {createComponent} from 'melody-component';
+import {applyMiddleware} from 'melody-util';
 import thunkMiddleware from 'redux-thunk';
 import promiseMiddleware from 'redux-promise';
 import template from './template.twig';

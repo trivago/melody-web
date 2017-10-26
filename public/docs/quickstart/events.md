@@ -7,13 +7,14 @@ The `ref` attribute can be used to access an elements DOM node inside your compo
 `template.twig`
 ```twig
 <div id="app">
-  <button ref="incrementButton">Increment</button>
-  <button ref="decrementButton">Decrement</button>
+  <h1>{{ count }}</h1>
+  <button ref="{{ incrementButton }}">Increment</button>
+  <button ref="{{ decrementButton }}">Decrement</button>
 </div>
 ```
 
 ## **Binding events**
-Melody uses the `ref` attribute to bind events to elements in your components using the `bindEvents` higher order function. Similar to `lifecycle`, inside our events we have access to the components instance (`this`) and can access its `props`, `refs`, `state` and also `dispatch` actions to its reducer.
+Melody uses the `ref` attribute to bind events to elements in your components using the `bindEvents` higher order function. Events receive the components instance as its second argument giving you access to its `props`, `refs`, `state` and also `dispatch` actions to its reducer.
 
 `buttons.js`
 ```js
@@ -63,9 +64,7 @@ import { createComponent, render } from 'melody-component';
 import { lifecycle, bindEvents, compose } from 'melody-hoc';
 import template from './template.twig';
 
-const initialState = {
-    count: 0
-};
+const initialState = { count: 0 };
 
 // Action types
 const INC = 'INC';
@@ -77,37 +76,33 @@ const decreaseCounter = () => ({ type: DEC });
 
 // Reducer
 const stateReducer = (state = initialState, action) => {
-    switch(action.type) {
-        case INC: {
-            return {
-                ...state,
-                count: state.count + 1
-            };
-        }
+  switch(action.type) {
+    case INC:
+      return {
+          ...state,
+          count: state.count + 1
+      };
 
-        case DEC: {
-            return {
-                ...state,
-                count: state.count - 1
-            };
-        }
-
-        default:
-            return state;
-    }
+    case DEC:
+      return {
+          ...state,
+          count: state.count - 1
+      };
+  }
+  return state;
 }
 
 // Make counter increase every second
 const withIncreasingCounter = lifecycle({
-    componentDidMount() {
-        this.intervalID = setInterval(
-            () => this.dispatch(increaseCounter()),
-            1000
-        );
-    },
-    componentWillUnmount() {
-        clearInterval(this.intervalID);
-    }
+  componentDidMount() {
+    this.intervalID = setInterval(
+      () => this.dispatch(increaseCounter()),
+      1000
+    );
+  },
+  componentWillUnmount() {
+    clearInterval(this.intervalID);
+  }
 });
 
 // Add Events

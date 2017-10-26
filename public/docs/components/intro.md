@@ -15,7 +15,7 @@ Given those optimizations, you can create your Component in JavaScript as easy a
 ```js
 // Item.js
 
-import {createComponent} from 'trv-melody';
+import {createComponent} from 'melody-component';
 
 import itemTemplate from './Item.twig';
 
@@ -74,7 +74,7 @@ state.
 ```js
 // Item.js
 
-import {createComponent, RECEIVE_PROPS} from 'trv-melody';
+import {createComponent, RECEIVE_PROPS} from 'melody-component';
 
 import itemTemplate from './Item.twig';
 
@@ -137,7 +137,7 @@ object which is then added to the component.
 
 
 ```js
-import {createComponent, RECEIVE_PROPS} from 'trv-melody';
+import {createComponent, RECEIVE_PROPS} from 'melody-component';
 
 import itemTemplate from './Item.twig';
 

@@ -13,16 +13,11 @@ Object.keys(LANGUAGES).forEach(key => hljs.registerLanguage(key, LANGUAGES[key])
 
 const contentCache = {};
 
-const updateInCache = (chapter, article, content) => {
-	if(!contentCache[chapter]) {
-		contentCache[chapter] = {};
-	}
-	contentCache[chapter][article] = content;
-	return content;
-};
-
 const getFromCache = (chapter, article) =>
-	contentCache[chapter] && contentCache[chapter][article];
+contentCache[chapter] && contentCache[chapter][article];
+
+const updateInCache = (chapter, article, content) =>
+	(contentCache[chapter] = contentCache[chapter] || {})[article] = content;
 
 const getContent = (chapter, article) => {
 	const path = `/docs/${chapter}/${article}.md`;
@@ -56,7 +51,7 @@ const contentOnMount = lifecycle({
 	}
 });
 
-const stateReducer = (state = {content: 'Loading...'}, { type, payload }) => {
+const stateReducer = (state = {content: ''}, { type, payload }) => {
 	switch (type) {
 		case RECEIVE_PROPS:
 			return {

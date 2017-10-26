@@ -12,8 +12,8 @@ as parameters.
 Import from `redux-thunk` and simply apply it as [middleware](../intro/middleware.md) to your component:
 
 ```js
-import {createComponent} from 'trv-melody/component';
-import {applyMiddleware} from 'trv-melody/util';
+import {createComponent} from 'melody-component';
+import {applyMiddleware} from 'melody-util';
 import thunkMiddleware from 'redux-thunk';
 
 export default createComponent(

@@ -74,8 +74,8 @@ import Item from './Item.twig';
 const ItemComponent = createComponent(Item);
 const enhance = bindEvents({
   deleteButton: {
-    click(event) {
-      this.props.deleteItem(this.props.item.itemId);
+    click(event, component) {
+      component.props.deleteItem(component.props.item.itemId);
 
       // stop event
       event.preventDefault();
@@ -83,8 +83,8 @@ const enhance = bindEvents({
     }
   },
   selected: {
-    change(event) {
-      this.props.toggleItem(this.props.itemId);
+    change(event, component) {
+      component.props.toggleItem(component.props.itemId);
     }
   }
 });
