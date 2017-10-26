@@ -7,3 +7,38 @@ html {
     -webkit-font-smoothing: antialiased;
     color: $purple;
 }
+
+a {
+    color: $green;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+code,
+pre.code {
+    font-family: Consolas, Monaco, monospace;
+    font-size: 14px;
+    line-height: 1.5;
+
+    .hljs-keyword,
+    .hljs-attr,
+    .hljs-function,
+    .hljs-tag {
+        color: $green;
+    }
+
+    .hljs-string,
+    .hljs-params {
+        color: $white;
+    }
+
+    .hljs-comment {
+        color: #aaa;
+    }
+}
+
+.js-focus-ring :focus:not(.focus-ring) {
+    outline-width: 0;
+}

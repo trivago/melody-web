@@ -6,10 +6,10 @@
     margin: 0 auto;
     grid-template-rows: 63px 1fr;
     font-size: 14px;
-    background: #37454d;
+    background: $juri;
 
     @include respond-to-min($tablet-large) {
-        background: #fff;
+        background: $white;
     }
 
     @include respond-to-min($desktop) {
@@ -31,7 +31,7 @@
     height: 100%;
     margin-top: 63px;
     font-size: 16px;
-    box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
     transform: translateX(110%);
     transition: transform 0.25s;
 
@@ -62,7 +62,7 @@
     }
 
     h3 {
-        margin:0;
+        margin: 0;
     }
 
     ul {
@@ -93,7 +93,7 @@
     grid-row: 2;
     padding: 32px;
     transition: transform 0.25s;
-    background: #fff;
+    background: $white;
 
     &--scaled {
         transform: scale(0.85) translate3d(25px, -50px, 0);
@@ -125,21 +125,15 @@
 
     p {
         margin: 12px 0;
-        color: #37454d;
+        color: $juri;
         line-height: 1.5;
-
-        @include respond-to-min($tablet-large) {
-
-        }
-
-
     }
 
     pre {
         padding: 8px;
         background-color: $dark-blue;
         color: $white;
-        overflow: scroll;
+        overflow: auto;
         font-size: 14px;
 
         @include respond-to-min($desktop) {
