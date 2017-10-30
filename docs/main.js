@@ -6017,6 +6017,7 @@ const stateReducer = (state = initialState, { type, payload }) => {
 const events = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_melody_hoc__["bindEvents"])({
     docsLink: {
         click(event, { props }) {
+            event.preventDefault();
             props.changeRoute('/documentation');
         }
     }
@@ -6662,11 +6663,11 @@ const _statics = ["class", "hero__melody-logo"],
       _statics$33 = ["type", "button", "class", "btn btn--primary"],
       _statics$34 = ["href", "https://github.com/trivago/melody", "role", "button", "class", "btn btn--secondary"],
       _statics$35 = ["class", "hero__download"],
-      _statics$36 = ["class", "highlight"],
+      _statics$36 = ["class", "highlight", "href", "/documentation"],
       _statics$37 = ["class", "hero__paragraph"],
       _statics$38 = ["class", "hero__code-block--comment"],
       _statics$39 = ["class", "hero__code-block"],
-      _statics$40 = ["class", "highlight"],
+      _statics$40 = ["class", "highlight", "href", "/documentation"],
       _statics$41 = ["class", "hero__paragraph"],
       _statics$42 = ["class", "hero__welcome"],
       _statics$43 = ["class", "hero hero--small"],
@@ -6815,7 +6816,7 @@ _template.render = function (_context) {
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9_melody_idom__["elementClose"])("div");
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9_melody_idom__["elementOpen"])("p", "i)XLw*y", _statics$37);
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9_melody_idom__["text"])("Check out the ");
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9_melody_idom__["elementOpen"])("a", "zvz,n%i", _statics$36);
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9_melody_idom__["elementOpen"])("a", "zvz,n%i", _statics$36, "ref", _context.docsLink);
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9_melody_idom__["text"])("5 mins tutorial");
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9_melody_idom__["elementClose"])("a");
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9_melody_idom__["text"])(" on how to build your first Melody application.");
@@ -6830,7 +6831,7 @@ _template.render = function (_context) {
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9_melody_idom__["elementClose"])("div");
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9_melody_idom__["elementOpen"])("p", "0GHj#A_", _statics$41);
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9_melody_idom__["text"])("Dive deeper and read the ");
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9_melody_idom__["elementOpen"])("a", "#lW+34+", _statics$40);
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9_melody_idom__["elementOpen"])("a", "#lW+34+", _statics$40, "ref", _context.docsLink);
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9_melody_idom__["text"])("documentation");
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9_melody_idom__["elementClose"])("a");
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9_melody_idom__["elementClose"])("p");
