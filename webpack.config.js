@@ -12,7 +12,7 @@ module.exports = {
         'main': path.join(__dirname, 'src/index.js')
     },
     output: {
-        path: path.join(__dirname, 'public'),
+        path: path.join(__dirname, 'docs'),
         filename: '[name].js'
     },
     module: {
@@ -52,15 +52,15 @@ module.exports = {
             { from: require.resolve('workbox-sw'), to: 'workbox-sw.js' }
         ]),
         new WorkboxBuildWebpackPlugin({
-            globDirectory: './public',
+            globDirectory: './docs',
             globPatterns: ['**/*.{html,js,css,svg,md,png,json,ico}'],
             globIgnores: ['sw.js','workbox-sw.js'],
             swSrc: path.join(__dirname, 'src', 'components', 'serviceworker', 'sw.js'),
-            swDest: path.join(__dirname, 'public', 'sw.js'),
+            swDest: path.join(__dirname, 'docs', 'sw.js'),
         })
     ],
     devServer: {
-      contentBase: path.join(__dirname, 'public'),
+      contentBase: path.join(__dirname, 'docs'),
       watchOptions: {
         ignored: /node_modules/,
       },

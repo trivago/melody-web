@@ -4,6 +4,10 @@ var workboxSW = new WorkboxSW({ clientsClaim: true, skipWaiting: true });
 
 workboxSW.precache([
   {
+    "url": "404.html",
+    "revision": "7a3e9ec8d06406e8394de76ddc4b4a2c"
+  },
+  {
     "url": "apple-touch-icon.png",
     "revision": "65006c258fada2dc199e95baa251aece"
   },
@@ -17,7 +21,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/advanced/intro.md",
-    "revision": "04f4d23ebddc5ab4d574752cc5fa7534"
+    "revision": "84be0314c5fe57b71af4928e3fa5d584"
   },
   {
     "url": "docs/advanced/jsx.md",
@@ -29,11 +33,11 @@ workboxSW.precache([
   },
   {
     "url": "docs/advanced/middleware.md",
-    "revision": "274e721ccc85d524ed86ddf6bac974e5"
+    "revision": "c79d9423932e52e5aa8b45cc6af63294"
   },
   {
     "url": "docs/advanced/mixins.md",
-    "revision": "f6391f2191b142cb8f18a87184d28b99"
+    "revision": "969d632752f1a7e57be2e45211aadc4d"
   },
   {
     "url": "docs/advanced/passing-actions.md",
@@ -45,7 +49,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/components/intro.md",
-    "revision": "c427c2b55a4f75ed5d228eac7227591b"
+    "revision": "be1f4cbc2af55b22f534fcf958349511"
   },
   {
     "url": "docs/quickstart/events.md",
@@ -73,27 +77,27 @@ workboxSW.precache([
   },
   {
     "url": "docs/README.md",
-    "revision": "3f331b1366cd8c3bcc1ac50381e7d95b"
+    "revision": "7889c589df7ab3ee8c11a935a9e70fcb"
   },
   {
     "url": "docs/redux/connect.md",
-    "revision": "9a86e13f8b2344cb45180dbc27e0ccfb"
+    "revision": "90333d4cf885e376fc0b2053b9c2a44d"
   },
   {
     "url": "docs/redux/intro.md",
-    "revision": "3b6784925e5818a2847ce07521ec9235"
+    "revision": "23afda5cd7c1760c83193abfd7d0fec1"
   },
   {
     "url": "docs/redux/provide.md",
-    "revision": "a861be0aa53b5a0cdccee1bbef5580f5"
+    "revision": "81b7f91ae36aa9c26fce4ad904de25fe"
   },
   {
     "url": "docs/redux/redux-saga.md",
-    "revision": "5bd80304e12bf8085f755d6b044d3abd"
+    "revision": "47e0578a82100c40ac0b1b9d285c15b0"
   },
   {
     "url": "docs/redux/redux-thunk.md",
-    "revision": "61c223d0ab3fb8129fcd8d0f50af62af"
+    "revision": "cb0cb007e64ff4a9b18c5b307d93fee6"
   },
   {
     "url": "docs/SUMMARY.md",
@@ -149,11 +153,15 @@ workboxSW.precache([
   },
   {
     "url": "index.html",
-    "revision": "9ebbf8b85b2fb77b190c88654e5aa3b7"
+    "revision": "af7c64b45022ad35135a4c71ce2c992c"
+  },
+  {
+    "url": "main.css",
+    "revision": "6c09d8f1d6ca9c6774986a632f6d0b43"
   },
   {
     "url": "main.js",
-    "revision": "5546cf81b7a1d925f09b3d71ace12143"
+    "revision": "e3756631f693407739db5945ba286b1b"
   },
   {
     "url": "manifest.json",
