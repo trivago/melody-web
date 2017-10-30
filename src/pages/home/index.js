@@ -31,6 +31,7 @@ const stateReducer = (state = initialState, {type, payload}) => {
 const events = bindEvents({
     docsLink: {
         click(event, {props}) {
+            event.preventDefault();
             props.changeRoute('/documentation');
         }
     }
