@@ -42,11 +42,10 @@ module.exports = {
         ]
     },
     plugins: [
-        // new webpack.DefinePlugin({
-        //     'process.env.NODE_ENV': JSON.stringify('production')
-        // }),
-        // new LodashModuleReplacementPlugin(),
-        // new BabiliPlugin({}, {comments: false}),
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify('production')
+        }),
+        new BabiliPlugin({}, {comments: false}),
         new ExtractTextPlugin('main.css'),
         new CopyWebpackPlugin([
             { from: require.resolve('workbox-sw'), to: 'workbox-sw.js' }

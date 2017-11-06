@@ -81,11 +81,11 @@ workboxSW.precache([
   },
   {
     "url": "docs/redux/connect.md",
-    "revision": "90333d4cf885e376fc0b2053b9c2a44d"
+    "revision": "8e2fd45faba317e520e13a925e6f761b"
   },
   {
     "url": "docs/redux/intro.md",
-    "revision": "23afda5cd7c1760c83193abfd7d0fec1"
+    "revision": "399cd208b731652f77de251d32c8ce5e"
   },
   {
     "url": "docs/redux/provide.md",
@@ -125,19 +125,19 @@ workboxSW.precache([
   },
   {
     "url": "docs/twig/key.md",
-    "revision": "8c89c331278fb51be9e9eb968ba0da53"
+    "revision": "f26579bc554fc2127dcc1a0fc9151787"
   },
   {
     "url": "docs/twig/loops.md",
-    "revision": "3d7ec45687e7163f8a8eefdba1aeb19a"
+    "revision": "aca527e317c8072b8f141a19de3637d9"
   },
   {
     "url": "docs/twig/ref.md",
-    "revision": "427ccc9bd617f0f18cb03f902fdc915f"
+    "revision": "db734cdef4531b95457afeb28617ca70"
   },
   {
     "url": "docs/twig/styles.md",
-    "revision": "6ddb94e668a0cf3f56741bdce124c596"
+    "revision": "9d7cdb21d263e0ecf7c1caeee366f295"
   },
   {
     "url": "favicon.ico",
@@ -153,7 +153,7 @@ workboxSW.precache([
   },
   {
     "url": "main.js",
-    "revision": "3906991341b02b326268ec18e6c5813f"
+    "revision": "8711bddcbe198089a30c18422d74346c"
   },
   {
     "url": "manifest.json",
