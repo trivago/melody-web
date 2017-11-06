@@ -5,7 +5,7 @@ var workboxSW = new WorkboxSW({ clientsClaim: true, skipWaiting: true });
 workboxSW.precache([
   {
     "url": "404.html",
-    "revision": "7a3e9ec8d06406e8394de76ddc4b4a2c"
+    "revision": "338dec16c9b858cee1568a9d874fde0f"
   },
   {
     "url": "apple-touch-icon.png",
@@ -100,10 +100,6 @@ workboxSW.precache([
     "revision": "cb0cb007e64ff4a9b18c5b307d93fee6"
   },
   {
-    "url": "docs/SUMMARY.md",
-    "revision": "4ab972e3ade4ee0874a8b9d382cd843f"
-  },
-  {
     "url": "docs/test/intro.md",
     "revision": "424b85bbe0d4eb654baab920a11bd94b"
   },
@@ -121,31 +117,27 @@ workboxSW.precache([
   },
   {
     "url": "docs/twig/attributes.md",
-    "revision": "29b8d6333e3ffba28d0377cfff658532"
+    "revision": "9024fbd5ec415e16ec51802031fc4f95"
   },
   {
     "url": "docs/twig/classes.md",
-    "revision": "08ed4f321a95bb3891b8c73fcd1cf1cf"
+    "revision": "7132261d23cb70da974e068fc6030a35"
   },
   {
-    "url": "docs/twig/intro.md",
-    "revision": "539fa5c85391f6592571df8762f3bebc"
+    "url": "docs/twig/key.md",
+    "revision": "8c89c331278fb51be9e9eb968ba0da53"
   },
   {
     "url": "docs/twig/loops.md",
-    "revision": "ba79b5f67b1de7619ab4849d9b421bba"
+    "revision": "3d7ec45687e7163f8a8eefdba1aeb19a"
+  },
+  {
+    "url": "docs/twig/ref.md",
+    "revision": "427ccc9bd617f0f18cb03f902fdc915f"
   },
   {
     "url": "docs/twig/styles.md",
-    "revision": "8a3ae4dc555d1fce68a6780007045db7"
-  },
-  {
-    "url": "docs/twig/the-key-attribute.md",
-    "revision": "3567de2d35bb702f264d1a408da2fca6"
-  },
-  {
-    "url": "docs/twig/the-ref-attribute.md",
-    "revision": "4b64b40bf3f6bf0a273b9cee89890550"
+    "revision": "6ddb94e668a0cf3f56741bdce124c596"
   },
   {
     "url": "favicon.ico",
@@ -153,7 +145,7 @@ workboxSW.precache([
   },
   {
     "url": "index.html",
-    "revision": "af7c64b45022ad35135a4c71ce2c992c"
+    "revision": "338dec16c9b858cee1568a9d874fde0f"
   },
   {
     "url": "main.css",

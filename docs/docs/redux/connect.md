@@ -1,6 +1,6 @@
 # Connecting a Component to a Redux Store
 
-In order to connect a Melody Component to a Redux Store that was [provided](./provide.md)
+In order to connect a Melody Component to a Redux Store that was [provided](provide)
 to it, you'll need to use the `connect` function from `melody-redux`.
 
 ## `connect(mapStateToProps?, mapDispatchToProps?, mergeProps?): (Component) => Component`

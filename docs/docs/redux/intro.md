@@ -21,7 +21,7 @@ an even better fit for it.
 ## `melody-redux`
 
 Because of this, Melody comes with built-in (optional) Redux integration
-which you can use by importing the [provide](./provide.md) and [connect](./connect.md)
+which you can use by importing the [provide](provide) and [connect](./connect)
 component wrapper functions from `melody-redux`.
 
 The provided API is modeled closely after `react-redux` which integrates
@@ -68,7 +68,7 @@ Instead, its sole purpose is to establish and maintain a connection to the
 Redux store and to convert the data stored there into *properties* that can
 be passed and used by a presentational component.
 
-You can create such components by using the [provide](./provide.md) and [connect](./connect.md)
+You can create such components by using the [provide](./provide) and [connect](./connect)
 functions exported by `melody-redux`.
 
 #### Screencasts
