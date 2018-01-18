@@ -69,6 +69,8 @@
 
             .hero__welcome {
                 order: 1;
+                background-color: $purple;
+                padding-left: 10px;
             }
         }
     }
@@ -76,6 +78,10 @@
     &__melody-logo {
         width: 270px;
         height: 270px;
+
+        @include respond-to-min($tablet-large) {
+            margin-top: 16px;
+        }
     }
 
     &__heading {
@@ -86,7 +92,7 @@
         line-height: 1.25;
 
         @include respond-to-min($desktop) {
-            font-size: 32px;
+            font-size: 24px;
         }
     }
 
@@ -112,7 +118,6 @@
         margin-top: 16px;
 
         @include respond-to-min($desktop) {
-            padding: 20px;
             font-size: 14px;
         }
 
