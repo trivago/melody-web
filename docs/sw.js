@@ -5,7 +5,7 @@ var workboxSW = new WorkboxSW({ clientsClaim: true, skipWaiting: true });
 workboxSW.precache([
   {
     "url": "404.html",
-    "revision": "338dec16c9b858cee1568a9d874fde0f"
+    "revision": "ee386bd24ffac7d116f56926a84c0646"
   },
   {
     "url": "apple-touch-icon.png",
@@ -145,7 +145,7 @@ workboxSW.precache([
   },
   {
     "url": "index.html",
-    "revision": "338dec16c9b858cee1568a9d874fde0f"
+    "revision": "b2c1cebabe10d4b657fc74563ec2622d"
   },
   {
     "url": "main.css",
@@ -153,7 +153,7 @@ workboxSW.precache([
   },
   {
     "url": "main.js",
-    "revision": "8711bddcbe198089a30c18422d74346c"
+    "revision": "97ddc61d6bb09934a576d12a544f5ca5"
   },
   {
     "url": "manifest.json",
@@ -198,6 +198,10 @@ workboxSW.precache([
   {
     "url": "melody_favicon_96x96.png",
     "revision": "4d9fea19d6333a94e320232d68ab5435"
+  },
+  {
+    "url": "melody_js_library.png",
+    "revision": "3c89e22c9c268a1001d617b18ef87b97"
   },
   {
     "url": "mstile-150x150.png",

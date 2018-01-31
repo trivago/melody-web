@@ -5,7 +5,6 @@ import MelodyRouter from './components/router';
 import 'wicg-focus-ring';
 import './components/serviceworker';
 import './base.scss';
-import './components/analytics';
 
 import Home from './pages/home';
 import Documentation from './pages/documentation';
