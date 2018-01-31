@@ -396,7 +396,6 @@ template {
   left: 0;
   padding: 16px 0;
   width: 100%;
-  letter-spacing: 1px;
   z-index: 4;
   background: #272361;
   border-bottom: 3px solid #6ECEB2;
@@ -894,7 +893,7 @@ template {
 
 .highlight {
   color: #6ECEB2;
-  text-decoration: underline; }
+  text-decoration: none; }
 
 .heading {
   font-size: 24px;
@@ -1045,10 +1044,15 @@ pre.code {
       .hero--small .hero__melody-logo {
         order: 2; }
       .hero--small .hero__welcome {
-        order: 1; } }
+        order: 1;
+        background-color: #424383;
+        padding-left: 10px; } }
   .hero__melody-logo {
     width: 270px;
     height: 270px; }
+    @media only screen and (min-width: 700px) {
+      .hero__melody-logo {
+        margin-top: 16px; } }
   .hero__heading {
     font-size: 20px;
     font-weight: bold;
@@ -1057,7 +1061,7 @@ pre.code {
     line-height: 1.25; }
     @media only screen and (min-width: 900px) {
       .hero__heading {
-        font-size: 32px; } }
+        font-size: 24px; } }
   .hero__paragraph {
     font-size: 14px; }
     @media only screen and (min-width: 900px) {
@@ -1075,7 +1079,6 @@ pre.code {
     margin-top: 16px; }
     @media only screen and (min-width: 900px) {
       .hero__code-block {
-        padding: 20px;
         font-size: 14px; } }
     .hero__code-block--comment {
       color: #899195; }
@@ -1344,3 +1347,11 @@ pre.code {
         padding: 16px; } }
   .docs-content code {
     font-size: inherit; }
+  .docs-content article {
+    color: #37454d; }
+    .docs-content article h1, .docs-content article h2, .docs-content article h3 {
+      color: #424383; }
+  .docs-content a {
+    text-decoration: none; }
+    .docs-content a:hover {
+      text-decoration: underline; }

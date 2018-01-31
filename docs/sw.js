@@ -5,7 +5,7 @@ var workboxSW = new WorkboxSW({ clientsClaim: true, skipWaiting: true });
 workboxSW.precache([
   {
     "url": "404.html",
-    "revision": "ee386bd24ffac7d116f56926a84c0646"
+    "revision": "e622b38414ca9ff4650eca7996273723"
   },
   {
     "url": "apple-touch-icon.png",
@@ -145,11 +145,11 @@ workboxSW.precache([
   },
   {
     "url": "index.html",
-    "revision": "b2c1cebabe10d4b657fc74563ec2622d"
+    "revision": "b5084693a0f99f280e4065da3a157b18"
   },
   {
     "url": "main.css",
-    "revision": "6c09d8f1d6ca9c6774986a632f6d0b43"
+    "revision": "ff75503b1bfa9dfe0b53fe1a112b7599"
   },
   {
     "url": "main.js",
