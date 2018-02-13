@@ -8,7 +8,7 @@ It is recommended that the `ref` attribute is filtered via the `attrs` filter so
 
 ## Example
 ```html
-<button {{ { ref: "arrow" } | attrs }} type="button" class="btn--reset">
+<button {{ { ref: arrow } | attrs }} type="button" class="btn--reset">
     <span class="icon-ic svg-arrow"><svg>...</svg></span>
     <span class="visuallyhidden">{{ title }}</span>
 </button>
