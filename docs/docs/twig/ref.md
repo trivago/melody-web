@@ -35,8 +35,8 @@ const enhance = withRefs(component => ({
     }
 }));
 ```
+## Populating `refs` of component object
 If you are using `withRefs` and want to access this NodeElement through `component.refs`, you should populate `refs` yourself.
-## Example
 ```js
 import { withRefs } from 'melody-hoc';
 const enhance = withRefs(component => ({
