@@ -1026,9 +1026,9 @@ pre.code {
   @media only screen and (min-width: 900px) {
     .hero {
       justify-items: center; } }
-  .hero__wrapper--small {
+  .hero__wrapper {
     position: relative; }
-    .hero__wrapper--small:before {
+    .hero__wrapper:before {
       content: '';
       display: block;
       position: absolute;

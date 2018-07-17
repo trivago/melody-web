@@ -149,11 +149,11 @@ workboxSW.precache([
   },
   {
     "url": "main.css",
-    "revision": "ff75503b1bfa9dfe0b53fe1a112b7599"
+    "revision": "89329095862d56804a5f65aa6e8fc5c4"
   },
   {
     "url": "main.js",
-    "revision": "97ddc61d6bb09934a576d12a544f5ca5"
+    "revision": "1de8b63c9aac12187ed03587632f1a56"
   },
   {
     "url": "manifest.json",
