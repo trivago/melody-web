@@ -41,21 +41,19 @@
         justify-items: center;
     }
 
-    &__wrapper {
-        &--small {
-            position: relative;
+    &__wrapper  {
+        position: relative;
 
-            &:before {
-                content: '';
-                display: block;
-                position: absolute;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                opacity: 0.25;
-                background: url('/melodic-pattern.svg') repeat-y;
-                background-size: cover;
-            }
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.25;
+            background: url('/melodic-pattern.svg') repeat-y;
+            background-size: cover;
         }
     }
 
