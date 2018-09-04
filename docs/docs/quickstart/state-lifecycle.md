@@ -124,7 +124,7 @@ componentWillUnmount() {
 
 ### **Updating the component's state**
 
-In the `reducer`, when we receive an `action` of type `INC` we need to returm our components new state with the updated value.
+In the `reducer`, when we receive an `action` of type `INC` we need to return our components new state with the updated value.
 
 ```js
 const stateReducer = (state, action) => {
