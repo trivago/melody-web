@@ -2,13 +2,13 @@
 
 The `ref` attribute can be used to export an element so that a component can gain access to it.
 
-The `ref` attribute must **not** be filtered through the `attrs` filter.
-
 The `ref` attribute is not visible on the rendered HTML.
+
+It is recommended that the `ref` attribute is filtered via the `attrs` filter so that it is not exposed to the HTML.
 
 ## Example
 ```html
-<button ref="arrow" type="button" class="btn--reset">
+<button {{ { ref: arrow } | attrs }} type="button" class="btn--reset">
     <span class="icon-ic svg-arrow"><svg>...</svg></span>
     <span class="visuallyhidden">{{ title }}</span>
 </button>
