@@ -122,7 +122,7 @@ const withClickHandlers = bindEvents({
 const component = createComponent(template, stateReducer);
 
 // Compose Enhancer Functions
-const enhancers = compose(withTickingCounter, withClickHandlers);
+const enhancers = compose(withIncreasingCounter, withClickHandlers);
 
 // Apply Enhancers
 const enhancedComponent = enhancers(component);
