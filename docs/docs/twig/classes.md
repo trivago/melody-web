@@ -21,7 +21,12 @@ To help combat this, Melody also has the `classes` filter which is similar to, a
 } | classes }}">Print</button>
 ```
 
-With the `classes` filter, the keyword `base` is used to specify the class list that you always want to be added to the element, and other classes are then specified on the left, with the condition that adds them on the right.
+With the `classes` filter, the keyword `base` is used to specify the class list that will always be added to the element. Any other classes are then specified afterwards, with their class name (`btn--disabled`) specified on the left and their condition (`isDisabled`) specified on the right.
+
+If `isDisabled` is `true`:
+```<button class="btn btn--primary btn--disabled">Print</button>```
+If `isDisabled` is `false`:
+```<button class="btn btn--primary">Print</button>```
 
 `base` does not have to be used if no default classes are to be added:
 ```html
