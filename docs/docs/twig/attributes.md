@@ -78,5 +78,6 @@ In this case, the `checked` attribute will only be added if the `isChecked` prop
 * its value is `false`
 * its value is `undefined`
 * its value is `null`
+* its value is `''`
 * it was previously specified on the element in question
 
