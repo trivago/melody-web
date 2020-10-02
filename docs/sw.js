@@ -53,7 +53,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/quickstart/events.md",
-    "revision": "7a9670d76c8db32b28848e5e834bf373"
+    "revision": "cae7d2b67406aa0e19c0e0ccf511f4e9"
   },
   {
     "url": "docs/quickstart/getting-started.md",
@@ -69,7 +69,7 @@ workboxSW.precache([
   },
   {
     "url": "docs/quickstart/state-lifecycle.md",
-    "revision": "5a63395fa29f8fcedb5cabdeec709a92"
+    "revision": "afa963a436186e53533b61e1254a435b"
   },
   {
     "url": "docs/quickstart/twig.md",
@@ -117,11 +117,11 @@ workboxSW.precache([
   },
   {
     "url": "docs/twig/attributes.md",
-    "revision": "9024fbd5ec415e16ec51802031fc4f95"
+    "revision": "f72b5035640b358b7e644d8ffa483cad"
   },
   {
     "url": "docs/twig/classes.md",
-    "revision": "7132261d23cb70da974e068fc6030a35"
+    "revision": "dca43d94674b04ea29c85eb3369b3d5a"
   },
   {
     "url": "docs/twig/key.md",
