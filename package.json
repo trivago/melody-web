@@ -6,7 +6,7 @@
     "test": "tests"
   },
   "dependencies": {
-    "highlight.js": "^9.12.0",
+    "highlight.js": "^10.1.2",
     "wicg-focus-ring": "^2.0.1"
   },
   "devDependencies": {
